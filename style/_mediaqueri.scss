@@ -1,0 +1,113 @@
+@media screen and (max-width: 900px) {
+  .header-card .logo span {
+    position: relative;
+    right: 0;
+    top: 0;
+    font-size: 20px;
+    display: block;
+  }
+  .header-card .main-text {
+    font-size: 22px;
+    line-height: 22px;
+    padding: 5% 10% 0 10%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header-card .logo img {
+    padding: 20px 20px 0 20px;
+  }
+  .my-button {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    line-height: 40px;
+    border-radius: 0;
+  }
+  .my-button.position {
+    bottom: 10vh;
+    left: 0;
+    margin-left: 0;
+  }
+  .header-card .link-down {
+    bottom: 10px;
+  }
+}
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  .header {
+    background: #fce6e2;
+  }
+}
+
+/* Medium and up 640 */
+@media screen and (min-width: 40em) {}
+
+/* от 0 до 700px */
+@media screen and (max-width: 43.750em) {
+  .my-accordion-item {
+    padding: 0;
+    h2 {
+      font-size: 7vw;
+      border-radius: 0px;
+      position: initial;
+      padding-right: 0;
+      display: block;
+      padding: 0;
+    }
+  }
+  .my-accordion-item.right h2 {
+    float: none;
+    border-radius: 0px;
+    padding-left: 0;
+  }
+}
+
+/* от 0 до 1024px */
+@media screen and (max-width: 63.9375em) {
+  .header {
+    background: #da3116;
+  }
+  .nav .top-bar ul {
+    display: block;
+    position: absolute;
+    width: 150px;
+    border-right: 5px solid;
+    border-bottom: 5px solid;
+    padding: 5px;
+    border-radius: 0 0 10px 0;
+  }
+  .nav li {
+    display: block;
+    margin-top: 5px;
+  }
+  .nav li a {
+    padding: 5px;
+    display: block;
+    border-bottom: 7px solid white;
+  }
+  .nav .top-bar {
+    padding: 0;
+  }
+  .my-button-nav {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    padding: 5px 0;
+    line-height: normal;
+  }
+}
+/* Medium only 640-1024 */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+
+/* Large and up 1024*/
+@media screen and (min-width: 64em) {}
+
+/* Large only 1024-1200 */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+  .header {
+    background: #000000;
+  }
+  .nav li {
+    font-size: 2.3vw;
+  }
+}
