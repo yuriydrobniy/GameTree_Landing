@@ -12,18 +12,15 @@ html(lang='en')
         link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/fontello.css")
         link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/animate.css")
         link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/dropdown-lang.css")
-        link(rel='icon', type='image/x-icon', href='img/favicon.ico?v1')
 
     body
         <!-- HEADER -->
-        //- Use wallpaper background on smaller screens.
         header.header(data-magellan, data-bar-offset='-50')
             .language
                 //a.link.active(href="#")
                 //    img(src='img/united-kingdom.svg')
                 //a.link(href="#")
                 //    img(src='img/russia.svg')
-                //- Hide flag option that’s already selected and make others hidden until acted upon. Mouseover on web, click on mobile.
                 select#cd-dropdown.cd-select(name='cd-dropdown')
                     option(value='-1', selected='')
                     option.ru(value='1')
@@ -60,16 +57,14 @@ html(lang='en')
                             a.link.link-down.my-button(href="#nav")
                                 | How It Works
                             .arrow_box
-                            //- (allow click like How it Works and make it grow on hover). Both should go to top of page (a little offset now)
                     .header-card.card-three
                         .card-main-text.position
                             | Thank you for joining us!
                         a.link.link-down.my-button(href="#nav")
                             | How It Works
                         .arrow_box
-        //- Nav should stick after top touches top of screen, not bottom. Make everything about 5px shorter
         nav#nav.nav(data-sticky-container='', data-magellan, data-bar-offset='100', data-threshold='')
-            div(data-sticky='',data-sticky-on='small', data-top-anchor="section-one", data-options='marginTop:0;', style='width:100%')
+            div(data-sticky='',data-sticky-on='small', data-top-anchor="nav", data-options='marginTop:0;', style='width:100%')
                 .row
                     .title-bar(data-responsive-toggle='my-menu', data-hide-for='large')
                         button.menu-icon(type='button', data-toggle='')
@@ -98,14 +93,14 @@ html(lang='en')
             .row.section-one
                 .columns.description
                     i
-                        | “GameTree is about maximizing your fun by getting to know
+                        | ”GameTree is about maximizing your fun by getting to know
                         | who you are as a person and connecting you with the people
                         | and experiences you didn’t even know you craved.”
                     span.signature John Uke, GameTree
             .row.section-two
                 .large-4.columns
                     a.link
-                        img(src='img/head.png')
+                        img(src='img/icons_advice.png')
                     .box.blue
                         h2 Personalized Advice
                         p
@@ -113,15 +108,15 @@ html(lang='en')
                             | friends and people like you.
                 .large-4.columns
                     a.link
-                        img(src='img/head.png')
+                        img(src='img/icon_jewel.png')
                     .box.brown
                         h2 Hidden Gems
                         p
                             | Discover new games and genres you will
-                            | like but would otherwise never know about.
+                            | like but would otherwise never know about
                 .large-4.columns
                     a.link
-                        img(src='img/head.png')
+                        img(src='img/icon_gamefriends.png')
                     .box.yellow
                         h2 Game With Friends
                         p
@@ -137,54 +132,103 @@ html(lang='en')
             .row.section-four
                 .description
                     span
-                        strong How It Works&nbsp;
+                        strong How it work&nbsp;
                     | Without getting too technical (unless, that`s your
                     | thing then,
-                    //- green link #87B822
                     a.link(href='') &nbsp;here you go
                     | ), GameTree leverages your
                     | tastes, personality, and friend network to offer
-                    | personal recommendations that are
+                    | personal recommendations
                     i
-                        strong &nbsp;65% more accuratet&nbsp;
+                        strong &nbsp;65% more accuratetly&nbsp;
                     | than user-voted averages.
             .row.section-five
-                //- these will have new style with text filled boxes connected to image circles (check Skype)
                 .playing-cards-wrapper
-                    .playing-cards(style='background: #65b1fb;')
-                        span Hidden Gems
-                        img(src='img/hidden-gems.jpg')
-                        p
-                            | Discover new games and genres you will like but would
-                            | otherwise never know about.
-                    .playing-cards(style='background: #96fb2d;')
-                        span Personalized Advice
-                        img(src='img/personalized-advice.jpg')
-                        p
-                            | Read reviews from your most relevant friends and people
-                            | like you.
-                    .playing-cards(style='background: #fb823e;')
+                    .playing-cards
                         div.data
                             img.avatar(src='img/jacklondon.png')
                             span.name.text-left boblikesoup
                             span.head.text-left Entrepreneur
                             span.head.text-left Pioneer
-                        //- add platform icons (mouse and dice icons from the wallpaper)
+                            span.small-ico.mouse
+                            span.small-ico.cube
                         div
                             div.head Likes
                                 p
-                                    | Competition, challenge, and fellowship.
+                                    u Competition
+                                    | ,&nbsp;
+                                    u challenge
+                                    | , and&nbsp;
+                                    u fellowship.
                             div.head Motivated by
                                 p
-                                    | Achievement, enthusiasm, and doing good.
+                                    u Achievement
+                                    | ,&nbsp;
+                                    u enthusiasm
+                                    | , and&nbsp;
+                                    u doing good.
+                            span.foot Interested In Playing
+                        div.games
+                            img(src='img/game-1.jpg')
+                            img(src='img/game-2.jpg')
+                            img(src='img/game-3.jpg')
+                    .playing-cards
+                        div.data
+                            img.avatar(src='img/jacklondon.png')
+                            span.name.text-left boblikesoup
+                            span.head.text-left Entrepreneur
+                            span.head.text-left Pioneer
+                            span.small-ico.mouse
+                            span.small-ico.cube
+                        div
+                            div.head Likes
+                                p
+                                    u Competition
+                                    | ,&nbsp;
+                                    u challenge
+                                    | , and&nbsp;
+                                    u fellowship.
+                            div.head Motivated by
+                                p
+                                    u Achievement
+                                    | ,&nbsp;
+                                    u enthusiasm
+                                    | , and&nbsp;
+                                    u doing good.
+                            span.foot Interested In Playing
+                        div.games
+                            img(src='img/game-1.jpg')
+                            img(src='img/game-2.jpg')
+                            img(src='img/game-3.jpg')
+                    .playing-cards
+                        div.data
+                            img.avatar(src='img/jacklondon.png')
+                            span.name.text-left boblikesoup
+                            span.head.text-left Entrepreneur
+                            span.head.text-left Pioneer
+                            span.small-ico.mouse
+                            span.small-ico.cube
+                        div
+                            div.head Likes
+                                p
+                                    u Competition
+                                    |,&nbsp;
+                                    u challenge
+                                    | , and&nbsp;
+                                    u fellowship.
+                            div.head Motivated by
+                                p
+                                    u Achievement
+                                    |,&nbsp;
+                                    u enthusiasm
+                                    |, and&nbsp;
+                                    u doing good.
                             span.foot Interested In Playing
                         div.games
                             img(src='img/game-1.jpg')
                             img(src='img/game-2.jpg')
                             img(src='img/game-3.jpg')
         section.section-slideshow
-            //- check latest .jpg for some adjustments to this page
-            //- add flip over functionality on submit as 1st page
             .row
                 .wrapper
                     .orbit(role='region', aria-label='Favorite Space Pictures', data-orbit='')
@@ -201,10 +245,10 @@ html(lang='en')
                                             input.email(type='text' placeholder='(your email)')
                                             | .
                                     .my-button.my-button-orbit Journey With Us
-                                    img(src='img/personalized-advice.jpg')
+                                    img(src='img/Jesse-Schell-Casual-Headshot.jpg')
                                     p.text-center
                                         i
-                                            | “GameTree has the potential to be a revolutionary social
+                                            | ”GameTree has the potential to be a revolutionary social
                                             | network that is based both on the secrets of player psychology
                                             | and our deep love of games.”
                                     h3.text-center Jesse Schell
@@ -212,10 +256,8 @@ html(lang='en')
                                         i
                                             | CEO of
                                             u &nbsp;Schell Games&nbsp;
-                                            //- Link to https://www.schellgames.com/about + green styling on all body links
                                             | and Author of
                                             u &nbsp;The Art of Game Design&nbsp;
-                                            //- Link to https://www.amazon.com/Art-Game-Design-Lenses-Second/dp/1466598646/ref=sr_1_1?ie=UTF8&qid=1476383649&sr=8-1
                         button.orbit-previous
                             span.show-for-sr Previous Slide
                             |  ◀︎
@@ -245,7 +287,6 @@ html(lang='en')
                         i.icon-instagram
                     a.link
                         i.icon-vkontakte
-            //- green link color on hover
             .row
                 .large-8.large-centered
                     .large-4.columns

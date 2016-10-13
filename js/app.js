@@ -31,7 +31,7 @@ $(function(){
         }
     );
     $('.section-two .box').hover(function(){
-            $(this).addClass('animated flipInX');
+            $(this).addClass('animated jello');
         }
     );
     $(window).scroll(function() {
@@ -58,7 +58,7 @@ $(function(){
             wH = $(window).height(),
             wS = $(this).scrollTop();
         if (wS > (hT+hH-wH)){
-            $('.playing-cards-wrapper').addClass('animated slideInUp');
+            $('.playing-cards-wrapper').addClass('animated');
         }
     });
     // $(window).load(function() {

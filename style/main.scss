@@ -469,10 +469,15 @@ section {
   position: absolute;
   width: 360px;
   height: 450px;
-  border: 1px solid grey;
-  text-align: center;
+  //text-align: center;
   //background: #96fb2d;
   z-index: 999;
+  font-family: "Helvetica Neue Bold", sans-serif;
+  border: 2px solid;
+  border-radius: 15px;
+  background: url(../img/logo-play-card.jpg) no-repeat 0px 20px, white;
+  background-size: contain;
+  overflow: hidden;
   span {
     display: block;
   }
@@ -481,15 +486,15 @@ section {
     height: auto;
     display: block;
     float: right;
+    padding-top: 20px;
   }
   .name {
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 22px;
+    padding: 10px 0;
   }
   .head {
     font-size: 18px;
-    font-weight: 700;
-    padding: 10px 0;
+    padding: 5px 0;
   }
   img {
     width: 33.33333%;
@@ -504,6 +509,38 @@ section {
     position: absolute;
     bottom: 0;
     height: 60px;
+  }
+  .foot {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    bottom: 65px;
+
+  }
+  .small-ico {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    &.mouse {
+      background: url(../img/mouse.png) no-repeat;
+      background-size: contain;
+      width: 24px;
+      height: 34px;
+    }
+    &.cube {
+      background: url("../img/cube.png") no-repeat;
+      background-size: contain;
+      width: 34px;
+      height: 34px;
+    }
+  }
+  div div.head {
+    padding: 0 24px;
+    p {
+      font-size: 16px;
+    }
   }
 }
 /**** SECTION SLIDESHOW ****/
@@ -538,8 +575,14 @@ section {
     padding-bottom: 0;
   }
   img {
-    height: 150px;
+    height: 120px;
+    border-radius: 75px;
+    border: 1px solid;
+    margin-top: 20px;
   }
+}
+.orbit-previous:hover, .orbit-next:hover, .orbit-previous:active, .orbit-next:active, .orbit-previous:focus, .orbit-next:focus {
+  background-color: rgb(254, 225, 105);
 }
 
 /**** SECTION FOOTER ****/
