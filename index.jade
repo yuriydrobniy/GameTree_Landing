@@ -12,15 +12,13 @@ html(lang='en')
         link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/fontello.css")
         link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/animate.css")
         link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/dropdown-lang.css")
-
+        link(rel='icon', type='image/x-icon', href='img/favicon.ico?v1')
     body
         <!-- HEADER -->
+        //- Use wallpaper background on smaller screens.
         header.header(data-magellan, data-bar-offset='-50')
             .language
-                //a.link.active(href="#")
-                //    img(src='img/united-kingdom.svg')
-                //a.link(href="#")
-                //    img(src='img/russia.svg')
+                //- Hide flag option that’s already selected and make others hidden until acted upon. Mouseover on web, click on mobile.
                 select#cd-dropdown.cd-select(name='cd-dropdown')
                     option(value='-1', selected='')
                     option.ru(value='1')
@@ -57,12 +55,14 @@ html(lang='en')
                             a.link.link-down.my-button(href="#nav")
                                 | How It Works
                             .arrow_box
+                            //- (allow click like How it Works and make it grow on hover). Both should go to top of page (a little offset now)
                     .header-card.card-three
                         .card-main-text.position
                             | Thank you for joining us!
                         a.link.link-down.my-button(href="#nav")
                             | How It Works
                         .arrow_box
+        //- Nav should stick after top touches top of screen, not bottom. Make everything about 5px shorter
         nav#nav.nav(data-sticky-container='', data-magellan, data-bar-offset='100', data-threshold='')
             div(data-sticky='',data-sticky-on='small', data-top-anchor="nav", data-options='marginTop:0;', style='width:100%')
                 .row
@@ -82,18 +82,11 @@ html(lang='en')
                                 a.link.how-it-works(href='#contact-us') Contact Us
                             li
                                 .my-button.my-button-nav SECURE MY SPOT
-        //section#section-one.section-one(data-magellan-target="section-one")
-        //    .row
-        //        .columns.description
-        //            | ”GameTree is about maximizing your fun by getting to know
-        //            | who you are as a person and connecting you with the people
-        //            | and experiences you didn’t even know you craved.”
-        //            span.signature John Uke, GameTree
         section#section-one(data-magellan-target="section-one")
             .row.section-one
                 .columns.description
                     i
-                        | ”GameTree is about maximizing your fun by getting to know
+                        | “GameTree is about maximizing your fun by getting to know
                         | who you are as a person and connecting you with the people
                         | and experiences you didn’t even know you craved.”
                     span.signature John Uke, GameTree
@@ -113,7 +106,7 @@ html(lang='en')
                         h2 Hidden Gems
                         p
                             | Discover new games and genres you will
-                            | like but would otherwise never know about
+                            | like but would otherwise never know about.
                 .large-4.columns
                     a.link
                         img(src='img/icon_gamefriends.png')
@@ -123,26 +116,22 @@ html(lang='en')
                             | Find out which of your friends are interested
                             | in the same game as you, or meet new ones.
         section
-            //.row.section-three
-                //.columns.description
-                //    i
-                //        | ”As I got older, I stopped branching out, and gaming
-                //        | became boring. Positive statement”
-                //        span.signature John Uke, GameTree
             .row.section-four
                 .description
                     span
-                        strong How it work&nbsp;
+                        strong How It Works&nbsp;
                     | Without getting too technical (unless, that`s your
                     | thing then,
+                    //- green link #87B822
                     a.link(href='') &nbsp;here you go
                     | ), GameTree leverages your
                     | tastes, personality, and friend network to offer
-                    | personal recommendations
+                    | personal recommendations that are
                     i
-                        strong &nbsp;65% more accuratetly&nbsp;
+                        strong &nbsp;65% more accuratet&nbsp;
                     | than user-voted averages.
             .row.section-five
+                //- these will have new style with text filled boxes connected to image circles (check Skype)
                 .playing-cards-wrapper
                     .playing-cards
                         div.data
@@ -150,8 +139,7 @@ html(lang='en')
                             span.name.text-left boblikesoup
                             span.head.text-left Entrepreneur
                             span.head.text-left Pioneer
-                            span.small-ico.mouse
-                            span.small-ico.cube
+                        //- add platform icons (mouse and dice icons from the wallpaper)DONE
                         div
                             div.head Likes
                                 p
@@ -229,6 +217,8 @@ html(lang='en')
                             img(src='img/game-2.jpg')
                             img(src='img/game-3.jpg')
         section.section-slideshow
+            //- check latest .jpg for some adjustments to this page
+            //- add flip over functionality on submit as 1st page
             .row
                 .wrapper
                     .orbit(role='region', aria-label='Favorite Space Pictures', data-orbit='')
@@ -248,33 +238,26 @@ html(lang='en')
                                     img(src='img/Jesse-Schell-Casual-Headshot.jpg')
                                     p.text-center
                                         i
-                                            | ”GameTree has the potential to be a revolutionary social
+                                            | “GameTree has the potential to be a revolutionary social
                                             | network that is based both on the secrets of player psychology
                                             | and our deep love of games.”
                                     h3.text-center Jesse Schell
                                     span
                                         i
                                             | CEO of
-                                            u &nbsp;Schell Games&nbsp;
+                                            a.link(href="https://www.schellgames.com/about")
+                                                u &nbsp;Schell Games&nbsp;
+                                            //- Link to https://www.schellgames.com/about + green styling on all body links
                                             | and Author of
-                                            u &nbsp;The Art of Game Design&nbsp;
+                                            a.link(href="https://www.amazon.com/Art-Game-Design-Lenses-Second/dp/1466598646/ref=sr_1_1?ie=UTF8&qid=1476383649&sr=8-1")
+                                                u &nbsp;The Art of Game Design&nbsp;
+                                            //- Link to https://www.amazon.com/Art-Game-Design-Lenses-Second/dp/1466598646/ref=sr_1_1?ie=UTF8&qid=1476383649&sr=8-1
                         button.orbit-previous
                             span.show-for-sr Previous Slide
                             |  ◀︎
                         button.orbit-next
                             span.show-for-sr Next Slide
                             |  ▶︎
-                        //nav.orbit-bullets
-                        //    button.is-active(data-slide='0')
-                        //        span.show-for-sr First slide details.
-                        //        span.show-for-sr Current Slide
-                        //    button(data-slide='1')
-                        //        span.show-for-sr Second slide details.
-                        //    button(data-slide='2')
-                        //        span.show-for-sr Third slide details.
-                        //    button(data-slide='3')
-                        //        span.show-for-sr Fourth slide details.
-
         footer.footer
             .row
                 .wrapper-ico
@@ -287,6 +270,7 @@ html(lang='en')
                         i.icon-instagram
                     a.link
                         i.icon-vkontakte
+            //- green link color on hover
             .row
                 .large-8.large-centered
                     .large-4.columns
