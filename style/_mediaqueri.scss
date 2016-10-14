@@ -15,7 +15,16 @@
 /* 400px */
 @media screen and (max-width: 25.000em) {
   .section-five {
-    transform: scale(0.65);
+    //transform: scale(0.65);
+  }
+  .playing-cards-wrapper {
+    width: 100%;
+  }
+  .playing-cards {
+    width: 100%;
+  }
+  .playing-cards .avatar {
+    width: 50vw;
   }
 }
 /* Small only */
