@@ -15,7 +15,7 @@ html(lang='en')
         link(rel='icon', type='image/x-icon', href='img/favicon.ico?v1')
     body
         <!-- HEADER -->
-        //- Use wallpaper background on smaller screens.
+        //- On small screensizes is showing wrong wallpaper
         header.header(data-magellan, data-bar-offset='-50')
             .language
                 //- Hide flag option that’s already selected and make others hidden until acted upon. Mouseover on web, click on mobile.
@@ -128,7 +128,7 @@ html(lang='en')
                     | tastes, personality, and friend network to offer
                     | personal recommendations that are
                     i
-                        strong &nbsp;65% more accuratet&nbsp;
+                        strong &nbsp;65% more accurate&nbsp;
                     | than user-voted averages.
             .row.section-five
                 //- these will have new style with text filled boxes connected to image circles (check Skype)
@@ -243,6 +243,7 @@ html(lang='en')
                                             | and our deep love of games.”
                                     h3.text-center Jesse Schell
                                     span
+                                        //- bottom of this line is getting cut off
                                         i
                                             | CEO of
                                             a.link(href="https://www.schellgames.com/about")
@@ -252,23 +253,24 @@ html(lang='en')
                                             a.link(href="https://www.amazon.com/Art-Game-Design-Lenses-Second/dp/1466598646/ref=sr_1_1?ie=UTF8&qid=1476383649&sr=8-1")
                                                 u &nbsp;The Art of Game Design&nbsp;
                                             //- Link to https://www.amazon.com/Art-Game-Design-Lenses-Second/dp/1466598646/ref=sr_1_1?ie=UTF8&qid=1476383649&sr=8-1
-                        button.orbit-previous
-                            span.show-for-sr Previous Slide
-                            |  ◀︎
-                        button.orbit-next
-                            span.show-for-sr Next Slide
-                            |  ▶︎
+                        //- Will be an automatic slideshow and only to the testimonials so don't need buttons
+                        //- button.orbit-previous
+                        //-     span.show-for-sr Previous Slide
+                        //-     |  ◀︎
+                        //- button.orbit-next
+                        //-     span.show-for-sr Next Slide
+                        //-     |  ▶︎
         footer.footer
             .row
                 .wrapper-ico
                     span Follow as on:&nbsp;
-                    a.link(href='')
+                    a.link(href='' target="_blank")
                         i.icon-blogger
-                    a.link(href='')
+                    a.link(href='https://www.facebook.com/gametreetribe/' target="_blank")
                         i.icon-facebook
-                    a.link
+                    a.link(href='' target="_blank")
                         i.icon-instagram
-                    a.link
+                    a.link(href='' target="_blank")
                         i.icon-vkontakte
             //- green link color on hover
             .row
@@ -278,37 +280,37 @@ html(lang='en')
                             li
                                 strong Learn
                             li
-                                a.link(href='#about') About
+                                a.link(href='#about' target="_blank") About
                             li
-                                a.link(href='#blog') Blog
+                                a.link(href='#blog' target="_blank") Blog
                             li
-                                a.link(href='#contact-us') Our Journey
+                                a.link(href='#contact-us' target="_blank") Our Journey
                             li
-                                a.link(href='#contact-us') Privacy Policy
+                                a.link(href='#contact-us' target="_blank") Privacy Policy
                     .large-4.columns
                         ul
                             li
                                 strong Engage
                             li
-                                a.link(href='#about') Promote
+                                a.link(href='#about' target="_blank") Promote
                             li
-                                a.link(href='#blog') Jobs
+                                a.link(href='#blog' target="_blank") Jobs
                             li
-                                a.link(href='#contact-us') Developers
+                                a.link(href='#contact-us' target="_blank") Developers
                             li
-                                a.link(href='#contact-us') Contact
+                                a.link(href='#contact-us' target="_blank") Contact
                     .large-4.columns
                         ul
                             li
                                 strong Business
                             li
-                                a.link(href='#about') Press
+                                a.link(href='#about' target="_blank") Press
                             li
-                                a.link(href='#blog') Invest
+                                a.link(href='#blog' target="_blank") Invest
                             li
-                                a.link(href='#contact-us') Opportunities
+                                a.link(href='#contact-us' target="_blank") Opportunities
                             li
-                                a.link(href='#contact-us') Store Owners
+                                a.link(href='#contact-us' target="_blank") Store Owners
             .row
                 span
                     | © Copyright&nbsp;
