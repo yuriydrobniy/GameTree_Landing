@@ -36,6 +36,7 @@
     font-size: 20px;
     height: 220px;
   }
+
 }
 
 /* Medium and up 640 */
@@ -64,23 +65,35 @@
     width: 100%;
     height: auto;
   }
-  .my-button {
+  .card-container .my-button,
+  .card-container input.disabled,
+  .card-container input.submit {
     width: 100%;
     height: auto;
     font-size: 18px;
     line-height: 40px;
     border-radius: 0;
-  }
-  .my-button.position {
     bottom: 13vh;
     left: 0;
     margin-left: 0;
   }
+  //.my-button.position, input.disabled, .submit {
+  //  bottom: 13vh;
+  //  left: 0;
+  //  margin-left: 0;
+  //}
   .card-form {
-    padding: 5% 5% 0 5%;
+    padding: 5% 5% 0 5%!important;
   }
   .header-card .link-down {
     bottom: 10px;
+  }
+  .section-slideshow .wrapper {
+    padding: 0 10px!important;
+  }
+  .orbit-container input.disabled {
+    width: auto;
+    font-size: 15px;
   }
 }
 
@@ -136,7 +149,7 @@
     font-size: 24px;
     line-height: normal;
   }
-  .card-form .name, .card-form .email {
+  .card-form .name, .card-form .email, .card-form input.required {
     font-size: 24px;
     width: 95%;
   }
@@ -151,7 +164,13 @@
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {}
 
 /* Large and up 1024*/
-@media screen and (min-width: 64em) {}
+@media screen and (min-width: 64em) {
+  .orbit-container {
+    & .mimi_field.last {
+      font-size: 32px;
+    }
+  }
+}
 
 /* Large only 1024-1200 */
 @media screen and (min-width: 64em) and (max-width: 74.9375em) {
@@ -164,4 +183,5 @@
   .orbit {
     padding: 20px 0;
   }
+
 }

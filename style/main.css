@@ -55,7 +55,7 @@ section {
   display: block;
   padding-top: 10px; }
 
-/**** BUTTON ****/
+/**** BUTTON , input.disabled, .submit ****/
 .my-button {
   width: 285px;
   height: 68px;
@@ -69,6 +69,7 @@ section {
   font-size: 24px;
   text-align: center;
   line-height: 66px;
+  border: none;
   background: #e54624; }
   .my-button:hover {
     background: #ff6936;
@@ -80,6 +81,33 @@ section {
     bottom: 20vh;
     left: 50%;
     margin-left: -142.5px; }
+
+.card-container .my-button, .card-container input.disabled, .card-container input.submit {
+  width: 285px;
+  height: 68px;
+  color: white;
+  font-family: "Helvetica Neue Bold", sans-serif;
+  display: block;
+  cursor: pointer;
+  border-radius: 20px;
+  box-sizing: border-box;
+  font-size: 24px;
+  text-align: center;
+  line-height: 66px;
+  border: none;
+  background: #e54624;
+  position: absolute;
+  bottom: 20vh;
+  left: 50%;
+  margin-left: -142.5px; }
+  .card-container .my-button:hover, .card-container input.disabled:hover, .card-container input.submit:hover {
+    background: #ff6936;
+    transition: all 0.3s; }
+  .card-container .my-button:active, .card-container input.disabled:active, .card-container input.submit:active {
+    background: #992f18; }
+.card-container input.disabled {
+  width: 400px;
+  margin-left: -200px; }
 
 .my-button-nav {
   width: 210px;
@@ -94,18 +122,29 @@ section {
   .my-button-nav:active {
     color: white; }
 
-.my-button-orbit {
-  font-family: 'Gotham Rounded Bold', sans-serif;
-  font-size: 26px;
+.orbit-container .my-button, .orbit-container input.disabled, .orbit-container input.submit {
   width: 260px;
   height: 60px;
+  color: white;
+  font-family: 'Gotham Rounded Bold', sans-serif;
+  display: block;
+  cursor: pointer;
+  border-radius: 20px;
+  box-sizing: border-box;
+  font-size: 26px;
+  text-align: center;
+  line-height: 60px;
+  border: none;
   background: #8bba29;
-  line-height: 60px; }
-  .my-button-orbit:hover {
+  margin: 0 auto;
+  margin-top: 2vh; }
+  .orbit-container .my-button:hover, .orbit-container input.disabled:hover, .orbit-container input.submit:hover {
     background: #a7df31;
     transition: all 0.3s; }
-  .my-button-orbit:active {
+  .orbit-container .my-button:active, .orbit-container input.disabled:active, .orbit-container input.submit:active {
     background: #5d7c1b; }
+.orbit-container input.disabled {
+  width: auto; }
 
 /**** HEADER ****/
 .header {
@@ -203,7 +242,7 @@ section {
 
 .card-form {
   padding: 10% 10% 0 10%; }
-  .card-form .name, .card-form .email {
+  .card-form .name, .card-form .email, .card-form input.required {
     width: 250px;
     border: 0px;
     border-bottom: 2px solid black;
@@ -222,7 +261,7 @@ section {
   transform: rotateY(0deg);
   z-index: 2;
   backface-visibility: hidden;
-  overflow-x: hidden; }
+  overflow: hidden; }
 
 .card-two {
   transform: rotateY(180deg);
@@ -621,23 +660,30 @@ section {
     width: 100%;
     height: auto; }
 
-  .my-button {
+  .card-container .my-button,
+  .card-container input.disabled,
+  .card-container input.submit {
     width: 100%;
     height: auto;
     font-size: 18px;
     line-height: 40px;
-    border-radius: 0; }
-
-  .my-button.position {
+    border-radius: 0;
     bottom: 13vh;
     left: 0;
     margin-left: 0; }
 
   .card-form {
-    padding: 5% 5% 0 5%; }
+    padding: 5% 5% 0 5% !important; }
 
   .header-card .link-down {
-    bottom: 10px; } }
+    bottom: 10px; }
+
+  .section-slideshow .wrapper {
+    padding: 0 10px !important; }
+
+  .orbit-container input.disabled {
+    width: auto;
+    font-size: 15px; } }
 /* ╨╛╤В 0 ╨┤╨╛ 1024px */
 @media screen and (max-width: 63.9375em) {
   section {
@@ -690,7 +736,7 @@ section {
     font-size: 24px;
     line-height: normal; }
 
-  .card-form .name, .card-form .email {
+  .card-form .name, .card-form .email, .card-form input.required {
     font-size: 24px;
     width: 95%; }
 
@@ -701,6 +747,9 @@ section {
     padding: 10px 0; } }
 /* Medium only 640-1024 */
 /* Large and up 1024*/
+@media screen and (min-width: 64em) {
+  .orbit-container .mimi_field.last {
+    font-size: 32px; } }
 /* Large only 1024-1200 */
 @media screen and (min-width: 64em) and (max-width: 74.9375em) {
   .nav li {

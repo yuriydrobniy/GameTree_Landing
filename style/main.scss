@@ -58,7 +58,7 @@ section {
   display: block;
   padding-top: 10px;
 }
-/**** BUTTON ****/
+/**** BUTTON , input.disabled, .submit ****/
 .my-button {
   width: 285px;
   height: 68px;
@@ -72,6 +72,7 @@ section {
   font-size: 24px;
   text-align: center;
   line-height: 66px;
+  border: none;
   background: $clr_button;
   &:hover {
     background: $clr_button * 1.5;
@@ -85,6 +86,38 @@ section {
     bottom: 20vh;
     left: 50%;
     margin-left: (-285px/2);
+  }
+}
+.card-container {
+  .my-button, input.disabled, input.submit {
+    width: 285px;
+    height: 68px;
+    color: white;
+    font-family: "Helvetica Neue Bold", sans-serif;
+    display: block;
+    cursor: pointer;
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-size: 24px;
+    text-align: center;
+    line-height: 66px;
+    border: none;
+    background: $clr_button;
+    position: absolute;
+    bottom: 20vh;
+    left: 50%;
+    margin-left: (-285px/2);
+    &:hover {
+      background: $clr_button * 1.5;
+      transition: all 0.3s;
+    }
+    &:active {
+      background: $clr_button / 1.5;
+    }
+  }
+  input.disabled {
+    width: 400px;
+    margin-left: (-400px/2);
   }
 }
 .my-button-nav {
@@ -103,21 +136,46 @@ section {
     color: white;
   }
 }
-.my-button-orbit {
-  font-family: 'Gotham Rounded Bold', sans-serif;
-  font-size: 26px;
-  width: 260px;
-  height: 60px;
-  background: $clr_button-orbit;
-  line-height: 60px;
-  &:hover {
-    background: $clr_button-orbit * 1.2;
-    transition: all 0.3s;
+.orbit-container {
+  .my-button, input.disabled, input.submit {
+    width: 260px;
+    height: 60px;
+    color: white;
+    font-family: 'Gotham Rounded Bold', sans-serif;
+    display: block;
+    cursor: pointer;
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-size: 26px;
+    text-align: center;
+    line-height: 60px;
+    border: none;
+    background: $clr_button-orbit;
+    margin: 0 auto;
+    margin-top: 2vh;
+    &:hover {
+      background: $clr_button-orbit * 1.2;
+      transition: all 0.3s;
+    }
+    &:active {
+      background: $clr_button-orbit / 1.5;
+    }
   }
-  &:active {
-    background: $clr_button-orbit / 1.5;
+  input.disabled {
+    width: auto;
   }
 }
+
+//.orbit-container {
+//  input.disabled, .submit {
+//    position: initial;
+//    bottom: 20vh;
+//    width: auto;
+//    left: 0;
+//    margin-top: 2vh;
+//  }
+//}
+
 /**** HEADER ****/
 .header {
   background: url("../img/icons-landing-color.png");
@@ -232,7 +290,7 @@ section {
 }
 .card-form {
   padding: 10% 10% 0 10%;
-  .name, .email {
+  .name, .email, input.required {
     width: 250px;
     border: 0px;
     border-bottom: 2px solid black;
@@ -254,7 +312,7 @@ section {
   transform: rotateY(0deg);
   z-index: 2;
   backface-visibility: hidden;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .card-two {
   transform: rotateY(180deg);

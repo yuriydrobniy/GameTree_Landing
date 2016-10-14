@@ -37,21 +37,47 @@ html(lang='en')
                                 | Experience them with&nbsp;
                                 span.special friends
                                 | .
-                            #button-one.my-button.position.fadeIn.animated SECURE MY SPOT
+                            #button-one.my-button.fadeIn.animated SECURE MY SPOT
                             a.link.link-down.my-button(href="#nav")
                                 | How It Works
                             .arrow_box.show-for-large
                         .header-card.card-two
                             .card-main-text
-                                form.card-form
-                                    | I,
-                                    input.name(type='text' placeholder='(your name)')
-                                    | , would like to journey forth
-                                    | forth into this new world of games. Please send my
-                                    | invite to @
-                                    input.email(type='text' placeholder='(your email)')
-                                    | .
-                            #button-two.my-button.position SECURE MY SPOT
+                                form#ema_signup_form.card-form(accept-charset='UTF-8', action='https://gem.godaddy.com/signups/subscribe/297384', method='post', target='_blank')
+                                    div(style='margin:0;padding:0;display:inline')
+                                        input(name='utf8', type='hidden', value='✓')
+                                    .mimi_field.required
+                                        | I,
+                                        //input.name(type='text' placeholder='(your name)')
+                                        input#signup_name.name(
+                                            name='signup[name]',
+                                            type='text',
+                                            data-required-field='This field is required',
+                                            placeholder='(your name)'
+                                            )
+                                        | , would like to journey forth
+                                        | forth into this new world of games. Please send my
+                                        | invite to @
+                                    .mimi_field.required
+                                        //input.email(type='text' placeholder='(your email)')
+                                        input#signup_email.email(
+                                            name='signup[email]',
+                                            type='text',
+                                            data-required-field='This field is required',
+                                            placeholder='(your email)'
+                                            )
+                                        | .
+                                    .mimi_field
+                                        input#webform_submit_button.submit.my-button(
+                                            type='submit',
+                                            value='SECURE MY SPOT',
+                                            data-default-text='Subscribe',
+                                            data-submitting-text='Sending...',
+                                            data-invalid-text='↑ You forgot some required fields',
+                                            data-choose-list='↑ Choose a list',
+                                            data-thanks='Thank you!'
+                                            )
+                            //#button-two.my-button.position SECURE MY SPOT
                             a.link.link-down.my-button(href="#nav")
                                 | How It Works
                             .arrow_box.show-for-large
@@ -75,11 +101,11 @@ html(lang='en')
                                 a.link
                                     img(src='img/logo-nav.png')
                             li
-                                a.link.games(href='#about') About
+                                a.link.games(href='http://blog.gametree.me/mission/' target="_blank") About
                             li
-                                a.link.fiends(href='#blog') Blog
+                                a.link.fiends(href='http://blog.gametree.me/' target="_blank") Blog
                             li
-                                a.link.how-it-works(href='#contact-us') Contact Us
+                                a.link.how-it-works(href='http://blog.gametree.me/contact-form/' target="_blank") Contact Us
                             li
                                 a.link.my-button.my-button-nav(href="#bottom-form")
                                     | SECURE MY SPOT
@@ -223,16 +249,50 @@ html(lang='en')
                             li.orbit-slide.active
                                 div
                                     .card-main-text
-                                        form.card-form
-                                            | I,
-                                            input.name(type='text' placeholder='(your name)')
-                                            | , would like to journey forth
-                                            | forth into this new world of games. Please send my
-                                            | invite to @
-                                            input.email(type='text' placeholder='(your email)')
-                                            | .
+                                        form#ema_bottom_signup_form.card-form(accept-charset='UTF-8', action='https://gem.godaddy.com/signups/subscribe/297384', method='post', target='_blank')
+                                            div(style='margin:0;padding:0;display:inline')
+                                                input(name='utf8', type='hidden', value='✓')
+                                            .mimi_field.required
+                                                | I,
+                                                //input.name(type='text' placeholder='(your name)')
+                                                input#signup_bottom_name.name(
+                                                name='signup[name]',
+                                                type='text',
+                                                data-required-field='This field is required',
+                                                placeholder='(your name)'
+                                                )
+                                                | , would like to journey forth
+                                                | forth into this new world of games. Please send my
+                                                | invite to @
+                                            .mimi_field.required
+                                                //input.email(type='text' placeholder='(your email)')
+                                                input#signup_bottom_email.email(
+                                                name='signup[email]',
+                                                type='text',
+                                                data-required-field='This field is required',
+                                                placeholder='(your email)'
+                                                )
+                                                | .
+                                            .mimi_field
+                                                input#webform_bottom_submit_button.submit.my-button-orbit(
+                                                type='submit',
+                                                value='Journey With Us',
+                                                data-default-text='Subscribe',
+                                                data-submitting-text='Sending...',
+                                                data-invalid-text='↑ You forgot some required fields',
+                                                data-choose-list='↑ Choose a list',
+                                                data-thanks='Thank you!'
+                                                )
+                                        //form.card-form
+                                        //    | I,
+                                        //    input.name(type='text' placeholder='(your name)')
+                                        //    | , would like to journey forth
+                                        //    | forth into this new world of games. Please send my
+                                        //    | invite to @
+                                        //    input.email(type='text' placeholder='(your email)')
+                                        //    | .
                                             //input(type='submit' value="Journey With Us")
-                                    #button-three.my-button.my-button-orbit Journey With Us
+                                    //#button-three.my-button.my-button-orbit Journey With Us
                                     img(src='img/Jesse-Schell-Casual-Headshot.jpg')
                                     p.text-center
                                         i
@@ -326,7 +386,7 @@ html(lang='en')
                 a.src = g;
                 m.parentNode.insertBefore(a, m)
             })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-            ga('create', 'UA-85684098-1', 'auto');
+            ga('create', 'UA-85683890-1', 'auto');
             ga('send', 'pageview');
         // /Google.Analytics
         // Yandex.Metrika counter

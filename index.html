@@ -28,19 +28,31 @@
             <div class="header-card card-one">
               <div class="logo bounceInLeft animated"><img src="img/logo-header.png"><span>Beta</span></div>
               <div class="card-main-text bounceInRight animated">Discover&nbsp;<span>games</span>&nbsp;you will like.<br>Experience them with&nbsp;<span class="special">friends</span>.</div>
-              <div id="button-one" class="my-button position fadeIn animated">SECURE MY SPOT</div><a href="#nav" class="link link-down my-button">How It Works</a>
+              <div id="button-one" class="my-button fadeIn animated">SECURE MY SPOT</div><a href="#nav" class="link link-down my-button">How It Works</a>
               <div class="arrow_box show-for-large"></div>
             </div>
             <div class="header-card card-two">
               <div class="card-main-text">
-                <form class="card-form">I,
-                  <input type="text" placeholder="(your name)" class="name">, would like to journey forth
-                  forth into this new world of games. Please send my
-                  invite to @
-                  <input type="text" placeholder="(your email)" class="email">.
+                <form id="ema_signup_form" accept-charset="UTF-8" action="https://gem.godaddy.com/signups/subscribe/297384" method="post" target="_blank" class="card-form">
+                  <div style="margin:0;padding:0;display:inline">
+                    <input name="utf8" type="hidden" value="✓">
+                  </div>
+                  <div class="mimi_field required">I,
+                    <!--input.name(type='text' placeholder='(your name)')-->
+                    <input id="signup_name" name="signup[name]" type="text" data-required-field="This field is required" placeholder="(your name)" class="name">, would like to journey forth
+                    forth into this new world of games. Please send my
+                    invite to @
+                  </div>
+                  <div class="mimi_field required">
+                    <!--input.email(type='text' placeholder='(your email)')-->
+                    <input id="signup_email" name="signup[email]" type="text" data-required-field="This field is required" placeholder="(your email)" class="email">.
+                  </div>
+                  <div class="mimi_field">
+                    <input id="webform_submit_button" type="submit" value="SECURE MY SPOT" data-default-text="Subscribe" data-submitting-text="Sending..." data-invalid-text="↑ You forgot some required fields" data-choose-list="↑ Choose a list" data-thanks="Thank you!" class="submit my-button">
+                  </div>
                 </form>
               </div>
-              <div id="button-two" class="my-button position">SECURE MY SPOT</div><a href="#nav" class="link link-down my-button">How It Works</a>
+              <!--#button-two.my-button.position SECURE MY SPOT--><a href="#nav" class="link link-down my-button">How It Works</a>
               <div class="arrow_box show-for-large"></div>
             </div>
           </div>
@@ -61,9 +73,9 @@
           <div id="my-menu" class="top-bar">
             <ul data-dropdown-menu="" class="dropdown menu">
               <li><a class="link"><img src="img/logo-nav.png"></a></li>
-              <li><a href="#about" class="link games">About</a></li>
-              <li><a href="#blog" class="link fiends">Blog</a></li>
-              <li><a href="#contact-us" class="link how-it-works">Contact Us</a></li>
+              <li><a href="http://blog.gametree.me/mission/" target="_blank" class="link games">About</a></li>
+              <li><a href="http://blog.gametree.me/" target="_blank" class="link fiends">Blog</a></li>
+              <li><a href="http://blog.gametree.me/contact-form/" target="_blank" class="link how-it-works">Contact Us</a></li>
               <li><a href="#bottom-form" class="link my-button my-button-nav">SECURE MY SPOT</a></li>
             </ul>
           </div>
@@ -191,15 +203,35 @@
               <li class="orbit-slide active">
                 <div>
                   <div class="card-main-text">
-                    <form class="card-form">I,
-                      <input type="text" placeholder="(your name)" class="name">, would like to journey forth
-                      forth into this new world of games. Please send my
-                      invite to @
-                      <input type="text" placeholder="(your email)" class="email">.
-                      <!--input(type='submit' value="Journey With Us")-->
+                    <form id="ema_bottom_signup_form" accept-charset="UTF-8" action="https://gem.godaddy.com/signups/subscribe/297384" method="post" target="_blank" class="card-form">
+                      <div style="margin:0;padding:0;display:inline">
+                        <input name="utf8" type="hidden" value="✓">
+                      </div>
+                      <div class="mimi_field required">I,
+                        <!--input.name(type='text' placeholder='(your name)')-->
+                        <input id="signup_bottom_name" name="signup[name]" type="text" data-required-field="This field is required" placeholder="(your name)" class="name">, would like to journey forth
+                        forth into this new world of games. Please send my
+                        invite to @
+                      </div>
+                      <div class="mimi_field required">
+                        <!--input.email(type='text' placeholder='(your email)')-->
+                        <input id="signup_bottom_email" name="signup[email]" type="text" data-required-field="This field is required" placeholder="(your email)" class="email">.
+                      </div>
+                      <div class="mimi_field">
+                        <input id="webform_bottom_submit_button" type="submit" value="Journey With Us" data-default-text="Subscribe" data-submitting-text="Sending..." data-invalid-text="↑ You forgot some required fields" data-choose-list="↑ Choose a list" data-thanks="Thank you!" class="submit my-button-orbit">
+                      </div>
                     </form>
+                    <!--form.card-form-->
+                    <!--    | I,-->
+                    <!--    input.name(type='text' placeholder='(your name)')-->
+                    <!--    | , would like to journey forth-->
+                    <!--    | forth into this new world of games. Please send my-->
+                    <!--    | invite to @-->
+                    <!--    input.email(type='text' placeholder='(your email)')-->
+                    <!--    | .//input(type='submit' value="Journey With Us")
+                    -->
                   </div>
-                  <div id="button-three" class="my-button my-button-orbit">Journey With Us</div><img src="img/Jesse-Schell-Casual-Headshot.jpg">
+                  <!--#button-three.my-button.my-button-orbit Journey With Us--><img src="img/Jesse-Schell-Casual-Headshot.jpg">
                   <p class="text-center"><i>
                       “GameTree has the potential to be a revolutionary social
                       network that is based both on the secrets of player psychology
@@ -264,7 +296,7 @@
           a.src = g;
           m.parentNode.insertBefore(a, m)
       })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-      ga('create', 'UA-85684098-1', 'auto');
+      ga('create', 'UA-85683890-1', 'auto');
       ga('send', 'pageview');
     </script>
     <!-- /Google.Analytics-->
