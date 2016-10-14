@@ -15,14 +15,13 @@ html(lang='en')
         link(rel='icon', type='image/x-icon', href='img/favicon.ico?v1')
     body
         <!-- HEADER -->
-        //- On small screensizes is showing wrong wallpaper
-        header.header(data-magellan, data-bar-offset='-50')
+        header.header(data-magellan, data-bar-offset='-30')
             .language
                 //- Hide flag option that’s already selected and make others hidden until acted upon. Mouseover on web, click on mobile.
                 select#cd-dropdown.cd-select(name='cd-dropdown')
                     option(value='-1', selected='')
                     option.ru(value='1')
-                    option.en(value='2')
+                    //option.en(value='2')
             .row
                 .card-container
                     .flipper-card-container
@@ -31,16 +30,17 @@ html(lang='en')
                                 img(src='img/logo-header.png')
                                 span Beta
                             .card-main-text.bounceInRight.animated
-                                | Find your next favorite&nbsp;
-                                span game
+                                | Discover&nbsp;
+                                span games
+                                | &nbsp;you will like.
                                 br
-                                | and best&nbsp;
+                                | Experience them with&nbsp;
                                 span.special friends
-                                | &nbsp;to play it with.
+                                | .
                             #button-one.my-button.position.fadeIn.animated SECURE MY SPOT
                             a.link.link-down.my-button(href="#nav")
                                 | How It Works
-                            .arrow_box
+                            .arrow_box.show-for-large-only
                         .header-card.card-two
                             .card-main-text
                                 form.card-form
@@ -54,14 +54,14 @@ html(lang='en')
                             #button-two.my-button.position SECURE MY SPOT
                             a.link.link-down.my-button(href="#nav")
                                 | How It Works
-                            .arrow_box
+                            .arrow_box.show-for-large-only
                             //- (allow click like How it Works and make it grow on hover). Both should go to top of page (a little offset now)
                     .header-card.card-three
                         .card-main-text.position
                             | Thank you for joining us!
                         a.link.link-down.my-button(href="#nav")
                             | How It Works
-                        .arrow_box
+                        .arrow_box.show-for-large-only
         //- Nav should stick after top touches top of screen, not bottom. Make everything about 5px shorter
         nav#nav.nav(data-sticky-container='', data-magellan, data-bar-offset='100', data-threshold='')
             div(data-sticky='',data-sticky-on='small', data-top-anchor="nav", data-options='marginTop:0;', style='width:100%')
@@ -121,9 +121,8 @@ html(lang='en')
                     span
                         strong How It Works&nbsp;
                     | Without getting too technical (unless, that`s your
-                    | thing then,
-                    //- green link #87B822
-                    a.link(href='') &nbsp;here you go
+                    | thing then,&nbsp;
+                    a.link.link-underline(href='') here you go
                     | ), GameTree leverages your
                     | tastes, personality, and friend network to offer
                     | personal recommendations that are
@@ -139,7 +138,6 @@ html(lang='en')
                             span.name.text-left boblikesoup
                             span.head.text-left Entrepreneur
                             span.head.text-left Pioneer
-                        //- add platform icons (mouse and dice icons from the wallpaper)DONE
                         div
                             div.head Likes
                                 p
@@ -217,12 +215,14 @@ html(lang='en')
                             img(src='img/game-2.jpg')
                             img(src='img/game-3.jpg')
         section.section-slideshow
-            //- check latest .jpg for some adjustments to this page
             //- add flip over functionality on submit as 1st page
             .row
                 .wrapper
                     .orbit(role='region', aria-label='Favorite Space Pictures', data-orbit='')
                         ul.orbit-container
+                            .card-three
+                                .card-main-text.position
+                                    | Thank you for joining us!
                             li.orbit-slide.active
                                 div
                                     .card-main-text
@@ -235,7 +235,7 @@ html(lang='en')
                                             input.email(type='text' placeholder='(your email)')
                                             | .
                                             //input(type='submit' value="Journey With Us")
-                                    .my-button.my-button-orbit Journey With Us
+                                    #button-three.my-button.my-button-orbit Journey With Us
                                     img(src='img/Jesse-Schell-Casual-Headshot.jpg')
                                     p.text-center
                                         i
@@ -247,12 +247,12 @@ html(lang='en')
                                         //- bottom of this line is getting cut off
                                         i
                                             | CEO of
-                                            a.link(href="https://www.schellgames.com/about")
-                                                u &nbsp;Schell Games&nbsp;
+                                            a.link.link-underline(href="https://www.schellgames.com/about")
+                                                | &nbsp;Schell Games&nbsp;
                                             //- Link to https://www.schellgames.com/about + green styling on all body links
                                             | and Author of
-                                            a.link(href="https://www.amazon.com/Art-Game-Design-Lenses-Second/dp/1466598646/ref=sr_1_1?ie=UTF8&qid=1476383649&sr=8-1")
-                                                u &nbsp;The Art of Game Design&nbsp;
+                                            a.link.link-underline(href="https://www.amazon.com/Art-Game-Design-Lenses-Second/dp/1466598646/ref=sr_1_1?ie=UTF8&qid=1476383649&sr=8-1")
+                                                | &nbsp;The Art of Game Design&nbsp;
                                             //- Link to https://www.amazon.com/Art-Game-Design-Lenses-Second/dp/1466598646/ref=sr_1_1?ie=UTF8&qid=1476383649&sr=8-1
                         //- Will be an automatic slideshow and only to the testimonials so don't need buttons
                         //- button.orbit-previous
@@ -324,4 +324,3 @@ html(lang='en')
     script(type="text/javascript", src="js/modernizr.custom.63321.js")
     script(type="text/javascript", src="js/jquery.dropdown.js")
     script(type="text/javascript", src="js/app.js")
-

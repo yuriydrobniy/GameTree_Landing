@@ -14,21 +14,21 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.ico?v1">
   </head>
   <body><!-- HEADER -->
-    <header data-magellan data-bar-offset="-50" class="header">
+    <header data-magellan data-bar-offset="-30" class="header">
       <div class="language">
         <select id="cd-dropdown" name="cd-dropdown" class="cd-select">
           <option value="-1" selected=""></option>
           <option value="1" class="ru"></option>
-          <option value="2" class="en"></option>
+          <!--option.en(value='2')-->
         </select>
       </div>
       <div class="row">
         <div class="card-container">
           <div class="flipper-card-container">
             <div class="header-card card-one"><a href="#" class="link logo bounceInLeft animated"><img src="img/logo-header.png"><span>Beta</span></a>
-              <div class="card-main-text bounceInRight animated">Find your next favorite&nbsp;<span>game</span><br>and best&nbsp;<span class="special">friends</span>&nbsp;to play it with.</div>
+              <div class="card-main-text bounceInRight animated">Discover&nbsp;<span>games</span>&nbsp;you will like.<br>Experience them with&nbsp;<span class="special">friends</span>.</div>
               <div id="button-one" class="my-button position fadeIn animated">SECURE MY SPOT</div><a href="#nav" class="link link-down my-button">How It Works</a>
-              <div class="arrow_box"></div>
+              <div class="arrow_box show-for-large-only"></div>
             </div>
             <div class="header-card card-two">
               <div class="card-main-text">
@@ -40,12 +40,12 @@
                 </form>
               </div>
               <div id="button-two" class="my-button position">SECURE MY SPOT</div><a href="#nav" class="link link-down my-button">How It Works</a>
-              <div class="arrow_box"></div>
+              <div class="arrow_box show-for-large-only"></div>
             </div>
           </div>
           <div class="header-card card-three">
             <div class="card-main-text position">Thank you for joining us!</div><a href="#nav" class="link link-down my-button">How It Works</a>
-            <div class="arrow_box"></div>
+            <div class="arrow_box show-for-large-only"></div>
           </div>
         </div>
       </div>
@@ -111,9 +111,9 @@
     <section>
       <div class="row section-four">
         <div class="description"><span><strong>How It Works&nbsp;</strong></span>Without getting too technical (unless, that`s your
-          thing then,<a href="" class="link">&nbsp;here you go</a>), GameTree leverages your
+          thing then,&nbsp;<a href="" class="link link-underline">here you go</a>), GameTree leverages your
           tastes, personality, and friend network to offer
-          personal recommendations that are<i><strong>&nbsp;65% more accuratet&nbsp;</strong></i>than user-voted averages.
+          personal recommendations that are<i><strong>&nbsp;65% more accurate&nbsp;</strong></i>than user-voted averages.
         </div>
       </div>
       <div class="row section-five">
@@ -186,6 +186,9 @@
         <div class="wrapper">
           <div role="region" aria-label="Favorite Space Pictures" data-orbit="" class="orbit">
             <ul class="orbit-container">
+              <div class="card-three">
+                <div class="card-main-text position">Thank you for joining us!</div>
+              </div>
               <li class="orbit-slide active">
                 <div>
                   <div class="card-main-text">
@@ -197,54 +200,50 @@
                       <!--input(type='submit' value="Journey With Us")-->
                     </form>
                   </div>
-                  <div class="my-button my-button-orbit">Journey With Us</div><img src="img/Jesse-Schell-Casual-Headshot.jpg">
+                  <div id="button-three" class="my-button my-button-orbit">Journey With Us</div><img src="img/Jesse-Schell-Casual-Headshot.jpg">
                   <p class="text-center"><i>
                       “GameTree has the potential to be a revolutionary social
                       network that is based both on the secrets of player psychology
                       and our deep love of games.”</i></p>
-                  <h3 class="text-center">Jesse Schell</h3><span><i>CEO of<a href="https://www.schellgames.com/about" class="link">
-                        <u>&nbsp;Schell Games&nbsp;</u></a>and Author of<a href="https://www.amazon.com/Art-Game-Design-Lenses-Second/dp/1466598646/ref=sr_1_1?ie=UTF8&amp;qid=1476383649&amp;sr=8-1" class="link">
-                        <u>&nbsp;The Art of Game Design&nbsp;</u></a></i></span>
+                  <h3 class="text-center">Jesse Schell</h3><span><i>CEO of<a href="https://www.schellgames.com/about" class="link link-underline">&nbsp;Schell Games&nbsp;</a>and Author of<a href="https://www.amazon.com/Art-Game-Design-Lenses-Second/dp/1466598646/ref=sr_1_1?ie=UTF8&amp;qid=1476383649&amp;sr=8-1" class="link link-underline">&nbsp;The Art of Game Design&nbsp;</a></i></span>
                 </div>
               </li>
             </ul>
-            <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span> ◀︎</button>
-            <button class="orbit-next"><span class="show-for-sr">Next Slide</span> ▶︎</button>
           </div>
         </div>
       </div>
     </section>
     <footer class="footer">
       <div class="row">
-        <div class="wrapper-ico"><span>Follow as on:&nbsp;</span><a href="" class="link"><i class="icon-blogger"></i></a><a href="" class="link"><i class="icon-facebook"></i></a><a class="link"><i class="icon-instagram"></i></a><a class="link"><i class="icon-vkontakte"></i></a></div>
+        <div class="wrapper-ico"><span>Follow as on:&nbsp;</span><a href="" target="_blank" class="link"><i class="icon-blogger"></i></a><a href="https://www.facebook.com/gametreetribe/" target="_blank" class="link"><i class="icon-facebook"></i></a><a href="" target="_blank" class="link"><i class="icon-instagram"></i></a><a href="" target="_blank" class="link"><i class="icon-vkontakte"></i></a></div>
       </div>
       <div class="row">
         <div class="large-8 large-centered">
           <div class="large-4 columns">
             <ul>
               <li><strong>Learn</strong></li>
-              <li><a href="#about" class="link">About</a></li>
-              <li><a href="#blog" class="link">Blog</a></li>
-              <li><a href="#contact-us" class="link">Our Journey</a></li>
-              <li><a href="#contact-us" class="link">Privacy Policy</a></li>
+              <li><a href="#about" target="_blank" class="link">About</a></li>
+              <li><a href="#blog" target="_blank" class="link">Blog</a></li>
+              <li><a href="#contact-us" target="_blank" class="link">Our Journey</a></li>
+              <li><a href="#contact-us" target="_blank" class="link">Privacy Policy</a></li>
             </ul>
           </div>
           <div class="large-4 columns">
             <ul>
               <li><strong>Engage</strong></li>
-              <li><a href="#about" class="link">Promote</a></li>
-              <li><a href="#blog" class="link">Jobs</a></li>
-              <li><a href="#contact-us" class="link">Developers</a></li>
-              <li><a href="#contact-us" class="link">Contact</a></li>
+              <li><a href="#about" target="_blank" class="link">Promote</a></li>
+              <li><a href="#blog" target="_blank" class="link">Jobs</a></li>
+              <li><a href="#contact-us" target="_blank" class="link">Developers</a></li>
+              <li><a href="#contact-us" target="_blank" class="link">Contact</a></li>
             </ul>
           </div>
           <div class="large-4 columns">
             <ul>
               <li><strong>Business</strong></li>
-              <li><a href="#about" class="link">Press</a></li>
-              <li><a href="#blog" class="link">Invest</a></li>
-              <li><a href="#contact-us" class="link">Opportunities</a></li>
-              <li><a href="#contact-us" class="link">Store Owners</a></li>
+              <li><a href="#about" target="_blank" class="link">Press</a></li>
+              <li><a href="#blog" target="_blank" class="link">Invest</a></li>
+              <li><a href="#contact-us" target="_blank" class="link">Opportunities</a></li>
+              <li><a href="#contact-us" target="_blank" class="link">Store Owners</a></li>
             </ul>
           </div>
         </div>
