@@ -26,7 +26,7 @@ html(lang='en')
                 .card-container
                     .flipper-card-container
                         .header-card.card-one
-                            a.link.logo.bounceInLeft.animated(href="#")
+                            .logo.bounceInLeft.animated
                                 img(src='img/logo-header.png')
                                 span Beta
                             .card-main-text.bounceInRight.animated
@@ -81,7 +81,8 @@ html(lang='en')
                             li
                                 a.link.how-it-works(href='#contact-us') Contact Us
                             li
-                                .my-button.my-button-nav SECURE MY SPOT
+                                a.link.my-button.my-button-nav(href="#bottom-form")
+                                    | SECURE MY SPOT
         section#section-one(data-magellan-target="section-one")
             .row.section-one
                 .columns.description
@@ -92,24 +93,21 @@ html(lang='en')
                     span.signature John Uke, GameTree
             .row.section-two
                 .large-4.columns
-                    a.link
-                        img(src='img/icons_advice.png')
+                    img(src='img/icons_advice.png')
                     .box.blue
                         h2 Personalized Advice
                         p
                             | Read reviews from your most relevant
                             | friends and people like you.
                 .large-4.columns
-                    a.link
-                        img(src='img/icon_jewel.png')
+                    img(src='img/icon_jewel.png')
                     .box.brown
                         h2 Hidden Gems
                         p
                             | Discover new games and genres you will
                             | like but would otherwise never know about.
                 .large-4.columns
-                    a.link
-                        img(src='img/icon_gamefriends.png')
+                    img(src='img/icon_gamefriends.png')
                     .box.yellow
                         h2 Game With Friends
                         p
@@ -122,7 +120,7 @@ html(lang='en')
                         strong How It Works&nbsp;
                     | Without getting too technical (unless, that`s your
                     | thing then,&nbsp;
-                    a.link.link-underline(href='') here you go
+                    a.link.link-underline(href='https://medium.com/game-tree/personality-the-key-of-lenses-and-likes-ac997cbb51e1#.ao2h6sld6' target="_blank") here you go
                     | ), GameTree leverages your
                     | tastes, personality, and friend network to offer
                     | personal recommendations that are
@@ -217,7 +215,7 @@ html(lang='en')
         section.section-slideshow
             .row
                 .wrapper
-                    .orbit(role='region', aria-label='Favorite Space Pictures', data-orbit='')
+                    #bottom-form.orbit(role='region', aria-label='Favorite Space Pictures', data-orbit='')
                         ul.orbit-container
                             .card-three
                                 .card-main-text.position
@@ -242,15 +240,15 @@ html(lang='en')
                                             | network that is based both on the secrets of player psychology
                                             | and our deep love of games.”
                                     h3.text-center Jesse Schell
-                                    span
+                                    div.bottom
                                         i
-                                            | CEO of
-                                            a.link.link-underline(href="https://www.schellgames.com/about")
-                                                | &nbsp;Schell Games&nbsp;
+                                            | CEO of&nbsp;
+                                            a.link.link-underline(href="https://www.schellgames.com/about" target="_blank")
+                                                | Schell Games;
                                             //- Link to https://www.schellgames.com/about + green styling on all body links
-                                            | and Author of
-                                            a.link.link-underline(href="https://www.amazon.com/Art-Game-Design-Lenses-Second/dp/1466598646/ref=sr_1_1?ie=UTF8&qid=1476383649&sr=8-1")
-                                                | &nbsp;The Art of Game Design&nbsp;
+                                            | &nbspand Author of&nbsp;
+                                            a.link.link-underline(href="https://www.amazon.com/Art-Game-Design-Lenses-Second/dp/1466598646/ref=sr_1_1?ie=UTF8&qid=1476383649&sr=8-1" target="_blank")
+                                                | The Art of Game Design&nbsp;
                                             //- Link to https://www.amazon.com/Art-Game-Design-Lenses-Second/dp/1466598646/ref=sr_1_1?ie=UTF8&qid=1476383649&sr=8-1
                         //- Will be an automatic slideshow and only to the testimonials so don't need buttons
                         //- button.orbit-previous
