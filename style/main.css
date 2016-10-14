@@ -349,7 +349,7 @@ section {
 
 /**** SECTION ONE ****/
 .section-one {
-  padding: 3vh 0; }
+  padding: 5vh 0; }
   .section-one .description {
     text-align: center;
     font-size: 26px;
@@ -422,7 +422,11 @@ section {
   border-radius: 15px;
   background: url(../img/logo-play-card.jpg) no-repeat 0px 20px, white;
   background-size: contain;
-  overflow: hidden; }
+  overflow: hidden;
+  cursor: pointer; }
+  .playing-cards:hover {
+    top: 10px;
+    right: -10px; }
   .playing-cards span {
     display: block; }
   .playing-cards .avatar {

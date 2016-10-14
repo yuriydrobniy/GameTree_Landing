@@ -40,7 +40,7 @@ html(lang='en')
                             #button-one.my-button.position.fadeIn.animated SECURE MY SPOT
                             a.link.link-down.my-button(href="#nav")
                                 | How It Works
-                            .arrow_box.show-for-large-only
+                            .arrow_box.show-for-large
                         .header-card.card-two
                             .card-main-text
                                 form.card-form
@@ -54,14 +54,14 @@ html(lang='en')
                             #button-two.my-button.position SECURE MY SPOT
                             a.link.link-down.my-button(href="#nav")
                                 | How It Works
-                            .arrow_box.show-for-large-only
+                            .arrow_box.show-for-large
                             //- (allow click like How it Works and make it grow on hover). Both should go to top of page (a little offset now)
                     .header-card.card-three
                         .card-main-text.position
                             | Thank you for joining us!
                         a.link.link-down.my-button(href="#nav")
                             | How It Works
-                        .arrow_box.show-for-large-only
+                        .arrow_box.show-for-large
         //- Nav should stick after top touches top of screen, not bottom. Make everything about 5px shorter
         nav#nav.nav(data-sticky-container='', data-magellan, data-bar-offset='100', data-threshold='')
             div(data-sticky='',data-sticky-on='small', data-top-anchor="nav", data-options='marginTop:0;', style='width:100%')
@@ -215,7 +215,6 @@ html(lang='en')
                             img(src='img/game-2.jpg')
                             img(src='img/game-3.jpg')
         section.section-slideshow
-            //- add flip over functionality on submit as 1st page
             .row
                 .wrapper
                     .orbit(role='region', aria-label='Favorite Space Pictures', data-orbit='')
@@ -244,7 +243,6 @@ html(lang='en')
                                             | and our deep love of games.”
                                     h3.text-center Jesse Schell
                                     span
-                                        //- bottom of this line is getting cut off
                                         i
                                             | CEO of
                                             a.link.link-underline(href="https://www.schellgames.com/about")
@@ -273,7 +271,6 @@ html(lang='en')
                         i.icon-instagram
                     a.link(href='' target="_blank")
                         i.icon-vkontakte
-            //- green link color on hover
             .row
                 .large-8.large-centered
                     .large-4.columns
@@ -299,7 +296,7 @@ html(lang='en')
                             li
                                 a.link(href='#contact-us' target="_blank") Developers
                             li
-                                a.link(href='#contact-us' target="_blank") Contact
+                                a.link(href='mailto:help@gametree.me' target="_blank") Contact
                     .large-4.columns
                         ul
                             li
