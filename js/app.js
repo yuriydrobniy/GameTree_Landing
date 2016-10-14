@@ -14,7 +14,7 @@ $(function() {
     $('#button-three').click(function() {
         console.log('111');
         $('.orbit-slide').addClass('rotate-two-off-screen').fadeOut(1000);
-        setTimeout("$('.card-three').addClass('card-three-show');", 1000);
+        setTimeout("$('.card-bottom').addClass('card-three-show');", 1000);
         setTimeout(typeText, 3000);
     });
 });

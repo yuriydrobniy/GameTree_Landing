@@ -221,13 +221,14 @@ section {
 .card-one {
   transform: rotateY(0deg);
   z-index: 2;
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+  overflow-x: hidden; }
 
 .card-two {
   transform: rotateY(180deg);
   backface-visibility: hidden; }
 
-.card-three {
+.card-three, .card-bottom {
   opacity: 0;
   visibility: hidden; }
 
@@ -430,8 +431,7 @@ section {
   overflow: hidden;
   cursor: pointer; }
   .playing-cards:hover {
-    top: 10px;
-    right: -10px; }
+    margin-left: 10px; }
   .playing-cards span {
     display: block; }
   .playing-cards .avatar {
@@ -517,7 +517,7 @@ section {
   .orbit h3 {
     margin: 0;
     line-height: normal; }
-  .orbit .card-three {
+  .orbit .card-bottom {
     position: absolute;
     top: 45%;
     width: 100%; }
@@ -684,7 +684,7 @@ section {
     padding: 20px 0; }
 
   .card-form {
-    padding: 10% 20% 0 20%; }
+    padding: 10% 15% 0 15%; }
 
   .card-main-text {
     font-size: 24px;
