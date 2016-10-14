@@ -592,8 +592,8 @@ section {
     padding-left: 0; } }
 /* ╨╛╤В 0 ╨┤╨╛ 1024px */
 @media screen and (max-width: 63.9375em) {
-  .header {
-    background: #da3116; }
+  section {
+    height: auto; }
 
   .nav .top-bar ul {
     display: block;
@@ -621,15 +621,21 @@ section {
     height: 100%;
     font-size: 20px;
     padding: 5px 0;
-    line-height: normal; } }
+    line-height: normal; }
+
+  .section-two .columns {
+    padding: 20px; }
+
+  .section-five {
+    padding: 20px 0; } }
 /* Medium only 640-1024 */
 /* Large and up 1024*/
 /* Large only 1024-1200 */
 @media screen and (min-width: 64em) and (max-width: 74.9375em) {
-  .header {
-    background: #000000; }
-
   .nav li {
-    font-size: 2.3vw; } }
+    font-size: 2.3vw; }
+
+  section {
+    height: auto; } }
 
 /*# sourceMappingURL=main.css.map */
