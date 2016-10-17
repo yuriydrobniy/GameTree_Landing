@@ -46,6 +46,7 @@ html(lang='en')
                                 form#ema_signup_form.card-form(accept-charset='UTF-8', action='https://gem.godaddy.com/signups/subscribe/297384', method='post', target='_blank')
                                     div(style='margin:0;padding:0;display:inline')
                                         input(name='utf8', type='hidden', value='✓')
+                                        input#signup_lang(name='signup[lang]', type='hidden', value='en')
                                     .mimi_field.required
                                         | I,
                                         //input.name(type='text' placeholder='(your name)')
@@ -252,6 +253,7 @@ html(lang='en')
                                         form#ema_bottom_signup_form.card-form(accept-charset='UTF-8', action='https://gem.godaddy.com/signups/subscribe/297384', method='post', target='_blank')
                                             div(style='margin:0;padding:0;display:inline')
                                                 input(name='utf8', type='hidden', value='✓')
+                                                input#signup_bottom_lang(name='signup[lang]', type='hidden', value='en')
                                             .mimi_field.required
                                                 | I,
                                                 //input.name(type='text' placeholder='(your name)')
