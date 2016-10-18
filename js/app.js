@@ -356,14 +356,20 @@ $( function() {
         },
 
         showConfirmationText: function(html) {
-            var fields = this.form.querySelectorAll('.mimi_field');
-
-            for (var i = 0; i < fields.length; ++i) {
-                fields[i].style['display'] = 'none';
-            }
-
-            (this.form.querySelectorAll('fieldset')[0] || this.form).innerHTML = html;
+            $('.card-two').addClass('rotate-two-off-screen').fadeOut(1000);
+            setTimeout("$('.card-three').addClass('card-three-show');", 1000);
+            setTimeout(typeText, 3000);
         },
+
+        // showConfirmationText: function(html) {
+        //     var fields = this.form.querySelectorAll('.mimi_field');
+        //
+        //     for (var i = 0; i < fields.length; ++i) {
+        //         fields[i].style['display'] = 'none';
+        //     }
+        //
+        //     (this.form.querySelectorAll('fieldset')[0] || this.form).innerHTML = html;
+        // },
 
         disableForm: function() {
             var elements = this.form.elements;
@@ -689,14 +695,20 @@ $( function() {
         },
 
         showConfirmationText: function(html) {
-            var fields = this.form.querySelectorAll('.mimi_field');
-
-            for (var i = 0; i < fields.length; ++i) {
-                fields[i].style['display'] = 'none';
-            }
-
-            (this.form.querySelectorAll('fieldset')[0] || this.form).innerHTML = html;
+            $('.orbit-slide').addClass('rotate-two-off-screen').fadeOut(1000);
+            setTimeout("$('.card-bottom').addClass('card-three-show');", 1000);
+            setTimeout(typeText, 3000);
         },
+
+        // showConfirmationText: function(html) {
+        //     var fields = this.form.querySelectorAll('.mimi_field');
+        //
+        //     for (var i = 0; i < fields.length; ++i) {
+        //         fields[i].style['display'] = 'none';
+        //     }
+        //
+        //     (this.form.querySelectorAll('fieldset')[0] || this.form).innerHTML = html;
+        // },
 
         disableForm: function() {
             var elements = this.form.elements;

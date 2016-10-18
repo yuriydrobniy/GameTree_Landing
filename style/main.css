@@ -40,6 +40,17 @@ section {
   section:last-child {
     border-bottom: none; }
 
+table {
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: auto; }
+
+td, th {
+  padding: 0;
+  vertical-align: top; }
+
 .link, .link:hover, .link:focus {
   text-decoration: none;
   color: #87B822; }
@@ -229,7 +240,7 @@ section {
 .card-main-text {
   padding-top: 2vh;
   padding-bottom: 2vh;
-  font-size: 38px;
+  font-size: 30px;
   line-height: 48px; }
   .card-main-text span {
     color: #cf7229;
@@ -299,16 +310,23 @@ section {
 /****  ANIMATION END  ****/
 .arrow_box {
   position: absolute;
-  bottom: 30px;
-  right: 50%; }
+  bottom: 10px !important;
+  right: 50%;
+  width: 40px;
+  height: 20px;
+  margin-right: -20px;
+  box-sizing: border-box; }
+  .arrow_box:hover {
+    transition: all 0.3s;
+    transform: scale(1.2); }
 
 .arrow_box:after, .arrow_box:before {
-  top: 100%;
+  top: 0;
   left: 50%;
   border: solid transparent;
   content: " ";
-  height: 0;
-  width: 0;
+  height: 10px;
+  width: 10px;
   position: absolute;
   pointer-events: none; }
 
@@ -322,7 +340,8 @@ section {
   border-color: transparent;
   border-top-color: #000000;
   border-width: 20px;
-  margin-left: -20px; }
+  margin-left: -20px;
+  display: block; }
 
 /**** NAV ****/
 .nav {
@@ -395,11 +414,12 @@ section {
 
 /**** SECTION ONE ****/
 .section-one {
-  padding: 5vh 0; }
+  padding: 8vh 0; }
   .section-one .description {
     text-align: center;
     font-size: 26px;
-    font-family: 'Gotham Rounded', sans-serif; }
+    font-family: 'Gotham Rounded', sans-serif;
+    font-weight: 700; }
 
 /**** SECTION TWO ****/
 .section-two .columns {
@@ -477,11 +497,16 @@ section {
     width: 200px;
     height: auto;
     display: block;
-    float: right;
-    padding-top: 20px; }
+    padding-top: 20px;
+    position: absolute;
+    right: 10px; }
   .playing-cards .name {
     font-size: 22px;
-    padding: 10px 0; }
+    display: inline-block;
+    border-radius: 4px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    background: #fee169; }
   .playing-cards .head {
     font-size: 18px;
     padding: 5px 0; }
@@ -606,6 +631,13 @@ section {
   .footer .icon-vkontakte:hover {
     color: #fee169;
     transition: all 0.5s; }
+
+.share-wrapper table {
+  margin: 0 auto;
+  padding-bottom: 10px; }
+.share-wrapper tbody {
+  background: #38171e;
+  border: none; }
 
 @media screen and (max-width: 900px) {
   .header-card .logo span {
