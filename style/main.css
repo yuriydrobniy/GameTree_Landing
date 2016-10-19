@@ -425,20 +425,50 @@ td, th {
 .section-two .columns {
   text-align: center; }
 .section-two .box {
-  padding: 5px 20px;
-  border: 4px solid black;
-  border-radius: 10px;
+  box-sizing: border-box;
+  border-radius: 200px 200px 10px 10px;
   font-size: 26px;
-  height: 220px; }
+  width: 300px;
+  margin: 0 auto; }
   .section-two .box p {
-    line-height: normal; }
+    line-height: normal;
+    font-family: 'Gotham Rounded', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    padding: 0 15px;
+    padding-bottom: 10px; }
 .section-two h2 {
   font-family: 'Gotham Rounded Bold', sans-serif;
-  font-size: 30px;
-  color: black; }
+  font-size: 28px;
+  color: black;
+  padding: 0 10px;
+  padding-top: 10px;
+  margin: 0; }
 .section-two img {
   height: 30vh;
   padding-bottom: 20px; }
+.section-two .circle {
+  width: 300px;
+  height: 300px;
+  border: 4px solid;
+  border-radius: 150px;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box; }
+  .section-two .circle img {
+    position: relative;
+    top: -11px;
+    left: -1px;
+    height: 325px;
+    width: auto;
+    max-width: none; }
+  .section-two .circle .jewel {
+    top: -4px;
+    left: -7px; }
+  .section-two .circle .gamefriends {
+    top: -21px;
+    left: -21px;
+    height: 335px; }
 
 /**** SECTION THREE ****/
 .section-three {
@@ -664,11 +694,11 @@ td, th {
 /* Small only */
 @media screen and (max-width: 39.9375em) {
   .section-two .box {
-    padding: 5px 20px;
-    border: 4px solid black;
-    border-radius: 10px;
     font-size: 20px;
-    height: 220px; } }
+    margin-bottom: 30px; }
+
+  .share-wrapper td {
+    display: inline-block; } }
 /* Medium and up 640 */
 /* ╨╛╤В 0 ╨┤╨╛ 750px */
 @media screen and (max-width: 46.875em) {
@@ -751,9 +781,6 @@ td, th {
     font-size: 20px;
     padding: 5px 0;
     line-height: normal; }
-
-  .section-two .columns {
-    padding: 20px; }
 
   .section-four {
     padding: 3vh 3vw; }

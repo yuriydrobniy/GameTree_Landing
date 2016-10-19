@@ -5,7 +5,7 @@ html(lang='en')
         meta(name="viewport" content="width=device-width, initial-scale=1")
         title
             | GameTree
-        //link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/foundation.min.css")
+        //- link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/foundation.min.css")
         link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/foundation.css")
         link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/main.css")
         link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/fonts.css")
@@ -53,7 +53,7 @@ html(lang='en')
                 select#cd-dropdown.cd-select(name='cd-dropdown')
                     option(value='-1', selected='')
                     option.ru(value='1')
-                    //option.en(value='2')
+                    //- option.en(value='2')
             .row
                 .card-container
                     .flipper-card-container
@@ -72,7 +72,7 @@ html(lang='en')
                             #button-one.my-button.fadeIn.animated SECURE MY SPOT
                             a.link.link-down.my-button(href="#nav")
                                 | How It Works
-                            //.arrow_box.show-for-large
+                            //- .arrow_box.show-for-large
                             a.link.arrow_box.show-for-large(href="#nav")
                         .header-card.card-two
                             .card-main-text
@@ -82,7 +82,7 @@ html(lang='en')
                                         input#signup_lang(name='signup[lang]', type='hidden', value='en')
                                     .mimi_field.required
                                         | I,
-                                        //input.name(type='text' placeholder='(your name)')
+                                        //- input.name(type='text' placeholder='(your name)')
                                         input#signup_name.name(
                                             name='signup[name]',
                                             type='text',
@@ -93,7 +93,7 @@ html(lang='en')
                                         | forth into this new world of games. Please send my
                                         | invite to @
                                     .mimi_field.required
-                                        //input.email(type='text' placeholder='(your email)')
+                                        //- input.email(type='text' placeholder='(your email)')
                                         input#signup_email.email(
                                             name='signup[email]',
                                             type='text',
@@ -111,18 +111,18 @@ html(lang='en')
                                             data-choose-list='↑ Choose a list',
                                             data-thanks='Thank you!'
                                             )
-                            //#button-two.my-button.position SECURE MY SPOT
+                            //- #button-two.my-button.position SECURE MY SPOT
                             a.link.link-down.my-button(href="#nav")
                                 | How It Works
                             a.link.arrow_box.show-for-large(href="#nav")
-                            //.arrow_box.show-for-large
+                            //- .arrow_box.show-for-large
                     .header-card.card-three
                         .card-main-text.position
                             | Thank you for joining us!
                         a.link.link-down.my-button(href="#nav")
                             | How It Works
                         a.link.arrow_box.show-for-large(href="#nav")
-                        //.arrow_box.show-for-large
+                        //- .arrow_box.show-for-large
         //- Nav should stick after top touches top of screen, not bottom. Make everything about 5px shorter
         nav#nav.nav(data-sticky-container='', data-magellan, data-bar-offset='100', data-threshold='')
             div(data-sticky='',data-sticky-on='small', data-top-anchor="nav", data-options='marginTop:0;', style='width:100%')
@@ -151,25 +151,28 @@ html(lang='en')
                         | GameTree is about maximizing your fun by getting to know
                         | who you are as a person and connecting you with the people
                         | and experiences you didn’t even know you craved.
-                    //span.signature John Uke, GameTree
+                    //- span.signature John Uke, GameTree
             .row.section-two
                 .large-4.columns
-                    img(src='img/icons_advice.png')
                     .box.blue
+                        .circle
+                            img(src='img/icons_advice.png')
                         h2 Personalized Advice
                         p
                             | Read reviews from your most relevant
                             | friends and people like you.
                 .large-4.columns
-                    img(src='img/icon_jewel.png')
                     .box.brown
+                        .circle
+                            img.jewel(src='img/icon_jewel.png')
                         h2 Hidden Gems
                         p
                             | Discover new games and genres you will
                             | like but would otherwise never know about.
                 .large-4.columns
-                    img(src='img/icon_gamefriends.png')
                     .box.yellow
+                        .circle
+                            img.gamefriends(src='img/icon_gamefriends.png')
                         h2 Game With Friends
                         p
                             | Find out which of your friends are interested
@@ -292,7 +295,7 @@ html(lang='en')
                                                 input#signup_bottom_lang(name='signup[lang]', type='hidden', value='en')
                                             .mimi_field.required
                                                 | I,
-                                                //input.name(type='text' placeholder='(your name)')
+                                                //- input.name(type='text' placeholder='(your name)')
                                                 input#signup_bottom_name.name(
                                                 name='signup[name]',
                                                 type='text',
@@ -303,7 +306,7 @@ html(lang='en')
                                                 | forth into this new world of games. Please send my
                                                 | invite to @
                                             .mimi_field.required
-                                                //input.email(type='text' placeholder='(your email)')
+                                                //- input.email(type='text' placeholder='(your email)')
                                                 input#signup_bottom_email.email(
                                                 name='signup[email]',
                                                 type='text',
@@ -321,23 +324,23 @@ html(lang='en')
                                                 data-choose-list='↑ Choose a list',
                                                 data-thanks='Thank you!'
                                                 )
-                                        //form.card-form
-                                        //    | I,
-                                        //    input.name(type='text' placeholder='(your name)')
-                                        //    | , would like to journey forth
-                                        //    | forth into this new world of games. Please send my
-                                        //    | invite to @
-                                        //    input.email(type='text' placeholder='(your email)')
-                                        //    | .
-                                            //input(type='submit' value="Journey With Us")
-                                    //#button-three.my-button.my-button-orbit Journey With Us
+                                        //- form.card-form
+                                        //-    | I,
+                                        //-    input.name(type='text' placeholder='(your name)')
+                                        //-    | , would like to journey forth
+                                        //-    | forth into this new world of games. Please send my
+                                        //-    | invite to @
+                                        //-    input.email(type='text' placeholder='(your email)')
+                                        //-    | .
+                                            //-input(type='submit' value="Journey With Us")
+                                    //- #button-three.my-button.my-button-orbit Journey With Us
                                     img(src='img/Jesse-Schell-Casual-Headshot.jpg')
                                     p.text-center
                                         i
                                             | “GameTree has the potential to be a revolutionary social
                                             | network that is based both on the secrets of player psychology
                                             | and our deep love of games.”
-                                    //h3.text-center Jesse Schell
+                                    //- h3.text-center Jesse Schell
                                     div.bottom
                                         i
                                             strong Jesse Schell&nbsp;
@@ -360,13 +363,13 @@ html(lang='en')
             .row
                 .wrapper-ico
                     span Follow as on:&nbsp;
-                    a.link(href='' target="_blank")
+                    a.link(href='http://blog.gametree.me/' target="_blank")
                         i.icon-blogger
                     a.link(href='https://www.facebook.com/gametreetribe/' target="_blank")
                         i.icon-facebook
-                    a.link(href='' target="_blank")
+                    a.link(href='https://www.instagram.com/gametreeapp/' target="_blank")
                         i.icon-instagram
-                    a.link(href='' target="_blank")
+                    a.link(href='https://vk.com/gametreeapp' target="_blank")
                         i.icon-vkontakte
             .row
                 .large-8.large-centered
@@ -375,9 +378,9 @@ html(lang='en')
                             li
                                 strong Learn
                             li
-                                a.link(href='#about' target="_blank") About
+                                a.link(href='http://blog.gametree.me/mission/' target="_blank") About
                             li
-                                a.link(href='#blog' target="_blank") Blog
+                                a.link(href='http://blog.gametree.me/' target="_blank") Blog
                             li
                                 a.link(href='#contact-us' target="_blank") Our Journey
                             li

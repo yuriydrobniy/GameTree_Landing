@@ -29,17 +29,17 @@ $(function(){
 });
 /* lift */
 $(function(){
-    $('.section-two img').hover(function(){
+    $('.section-two .circle').hover(function(){
         $(this).addClass('animated rotateIn');
     },
         function(){
             $(this).removeClass('animated rotateIn');
         }
     );
-    $('.section-two .box').hover(function(){
-            $(this).addClass('animated jello');
-        }
-    );
+    // $('.section-two .box').hover(function(){
+    //         $(this).addClass('animated jello');
+    //     }
+    // );
     $(window).scroll(function() {
         var hT = $('.section-four').offset().top,
             hH = $('.section-four').outerHeight(),

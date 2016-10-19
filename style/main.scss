@@ -507,24 +507,66 @@ td, th {
     text-align: center;
   }
   .box {
-    padding: 5px 20px;
-    border: 4px solid black;
-    border-radius: 10px;
+    //padding: 5px 20px;
+    //border: 4px solid black;
+    //border-radius: 10px;
+    //font-size: 26px;
+    //height: 220px;
+    box-sizing: border-box;
+    border-radius: 200px 200px 10px 10px;
     font-size: 26px;
-    height: 220px;
+    width: 300px;
+    margin: 0 auto;
     p {
       line-height: normal;
+      font-family: 'Gotham Rounded', sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      padding: 0 15px;
+      padding-bottom: 10px;
     }
   }
   h2 {
+    //font-family: 'Gotham Rounded Bold', sans-serif;
+    //font-size: 30px;
+    //color: black;
     font-family: 'Gotham Rounded Bold', sans-serif;
-    font-size: 30px;
+    font-size: 28px;
     color: black;
+    padding: 0 10px;
+    padding-top: 10px;
+    margin: 0;
   }
   img {
     //width: 300px;
     height: 30vh;
     padding-bottom: 20px;
+  }
+  .circle {
+    width: 300px;
+    height: 300px;
+    border: 4px solid;
+    border-radius: 150px;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    img {
+      position: relative;
+      top: -11px;
+      left: -1px;
+      height: 325px;
+      width: auto;
+      max-width: none;
+    }
+    .jewel {
+      top: -4px;
+      left: -7px;
+    }
+    .gamefriends {
+      top: -21px;
+      left: -21px;
+      height: 335px;
+    }
   }
 }
 
