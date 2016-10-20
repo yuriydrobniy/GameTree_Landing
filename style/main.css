@@ -34,6 +34,9 @@ body {
   overflow-x: hidden;
   line-height: normal; }
 
+body.ru-lang {
+  font-family: 'Open Sans', sans-serif; }
+
 section {
   height: 100vh;
   border-bottom: 4px solid #eaf0f3; }
@@ -51,6 +54,10 @@ td, th {
   padding: 0;
   vertical-align: top; }
 
+.share-wrapper table {
+  margin: 0 auto;
+  padding-bottom: 10px; }
+
 .link, .link:hover, .link:focus {
   text-decoration: none;
   color: #87B822; }
@@ -66,6 +73,38 @@ td, th {
   display: block;
   padding-top: 10px; }
 
+/**** ru container ****/
+.ru-lang .my-button,
+.ru-lang .card-container .my-button,
+.ru-lang .card-container input.disabled,
+.ru-lang .card-container input.submit {
+  font-family: inherit;
+  font-weight: 700; }
+.ru-lang .header-card .link-down {
+  font-size: 20px; }
+.ru-lang .nav li {
+  font-weight: 700;
+  font-family: inherit; }
+.ru-lang .section-one .description {
+  font-family: inherit; }
+.ru-lang .section-two h2 {
+  font-size: 26px;
+  line-height: inherit;
+  font-weight: 700; }
+.ru-lang .section-two .box p {
+  font-weight: 400; }
+.ru-lang .playing-cards {
+  font-weight: 700;
+  font-family: inherit; }
+.ru-lang .orbit-container .my-button, .ru-lang .orbit-container input.disabled, .ru-lang .orbit-container input.submit {
+  width: auto;
+  padding: 0 15px; }
+.ru-lang .orbit-container {
+  height: auto !important; }
+.ru-lang .orbit-slide {
+  max-height: 100% !important; }
+
+/**** ru container end ****/
 /**** BUTTON , input.disabled, .submit ****/
 .my-button {
   width: 285px;
@@ -157,6 +196,25 @@ td, th {
 .orbit-container input.disabled {
   width: auto; }
 
+/**** lang_panel ****/
+.language-wrapper .active {
+  display: block !important;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 5px; }
+.language-wrapper .en {
+  width: 35px;
+  height: 35px;
+  display: none;
+  background: url(../img/world.svg) !important; }
+.language-wrapper .ru {
+  background: url(../img/russia.svg) !important;
+  width: 35px;
+  height: 35px;
+  display: none; }
+.language-wrapper:hover .not-active {
+  display: block; }
+
 /**** HEADER ****/
 .header {
   background: url("../img/icons-landing-color.png");
@@ -169,7 +227,8 @@ td, th {
     position: absolute;
     top: 10px;
     right: 50px;
-    font-family: 'Helvetica Neue Medium', sans-serif; }
+    font-family: 'Helvetica Neue Medium', sans-serif;
+    z-index: 10; }
     .header .language a {
       display: block;
       float: left;
@@ -668,6 +727,12 @@ td, th {
 .share-wrapper tbody {
   background: #38171e;
   border: none; }
+.share-wrapper *, .share-wrapper *::before, .share-wrapper *::after {
+  box-sizing: content-box; }
+.share-wrapper .vkshare table tbody th, .share-wrapper .vkshare table tbody td {
+  padding: 0; }
+.share-wrapper .fb_iframe_widget span {
+  height: 22px !important; }
 
 @media screen and (max-width: 900px) {
   .header-card .logo span {
@@ -690,15 +755,21 @@ td, th {
     width: 100%; }
 
   .playing-cards .avatar {
-    width: 50vw; } }
+    width: 50vw; }
+
+  .ru-lang .orbit-container .my-button, .ru-lang .orbit-container input.disabled, .ru-lang .orbit-container input.submit {
+    font-size: 20px; } }
 /* Small only */
 @media screen and (max-width: 39.9375em) {
   .section-two .box {
-    font-size: 20px;
-    margin-bottom: 30px; }
+    font-size: 20px; }
 
   .share-wrapper td {
-    display: inline-block; } }
+    display: inline-block; }
+
+  .ru-lang .card-main-text {
+    font-size: 20px;
+    padding: 0 5px; } }
 /* Medium and up 640 */
 /* ╨╛╤В 0 ╨┤╨╛ 750px */
 @media screen and (max-width: 46.875em) {
@@ -757,7 +828,7 @@ td, th {
   .nav .top-bar ul {
     display: block;
     position: absolute;
-    width: 150px;
+    width: 170px;
     border-right: 5px solid;
     border-bottom: 5px solid;
     padding: 5px;
@@ -781,6 +852,9 @@ td, th {
     font-size: 20px;
     padding: 5px 0;
     line-height: normal; }
+
+  .section-two .box {
+    margin-bottom: 30px; }
 
   .section-four {
     padding: 3vh 3vw; }

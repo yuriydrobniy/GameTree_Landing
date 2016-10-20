@@ -26,6 +26,9 @@
   .playing-cards .avatar {
     width: 50vw;
   }
+  .ru-lang .orbit-container .my-button, .ru-lang .orbit-container input.disabled, .ru-lang .orbit-container input.submit {
+    font-size: 20px;
+  }
 }
 /* Small only */
 @media screen and (max-width: 39.9375em) {
@@ -35,10 +38,14 @@
     //border-radius: 10px;
     font-size: 20px;
     //height: 220px;
-    margin-bottom: 30px;
+    //margin-bottom: 30px;
   }
   .share-wrapper td {
     display: inline-block;
+  }
+  .ru-lang .card-main-text {
+    font-size: 20px;
+    padding: 0 5px;
   }
 
 }
@@ -112,7 +119,7 @@
   .nav .top-bar ul {
     display: block;
     position: absolute;
-    width: 150px;
+    width: 170px;
     border-right: 5px solid;
     border-bottom: 5px solid;
     padding: 5px;
@@ -136,6 +143,9 @@
     font-size: 20px;
     padding: 5px 0;
     line-height: normal;
+  }
+  .section-two .box {
+    margin-bottom: 30px;
   }
   .section-two .columns {
     //padding: 20px;

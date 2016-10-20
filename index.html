@@ -9,9 +9,8 @@
     <link type="text/css" rel="stylesheet" rev="stylesheet" href="style/fonts.css">
     <link type="text/css" rel="stylesheet" rev="stylesheet" href="style/fontello.css">
     <link type="text/css" rel="stylesheet" rev="stylesheet" href="style/animate.css">
-    <link type="text/css" rel="stylesheet" rev="stylesheet" href="style/dropdown-lang.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico?v1">
-    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?133"></script>
+    <script type="text/javascript" src="http://vk.com/js/api/share.js?94" charset="windows-1251"></script>
   </head>
   <body>
     <script>
@@ -23,12 +22,6 @@
           js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
           fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <script type="text/javascript">
-      VK.init({
-          apiId: 5672130, //used self api key
-          onlyWidgets: true
-      });
     </script>
     <script>
       window.twttr = (function (d, s, id) {
@@ -49,10 +42,10 @@
     </script><!-- HEADER -->
     <header data-magellan data-bar-offset="-30" class="header">
       <div class="language">
-        <select id="cd-dropdown" name="cd-dropdown" class="cd-select">
-          <option value="-1" selected=""></option>
-          <option value="1" class="ru"></option>
-        </select>
+        <div class="language-wrapper">
+          <div class="en active"></div>
+          <div class="ru not-active"><a href="http://ru.gametree.me/" class="link"></a></div>
+        </div>
       </div>
       <div class="row">
         <div class="card-container">
@@ -266,7 +259,7 @@
     </section>
     <footer class="footer">
       <div class="row">
-        <div class="wrapper-ico"><span>Follow as on:&nbsp;</span><a href="http://blog.gametree.me/" target="_blank" class="link"><i class="icon-blogger"></i></a><a href="https://www.facebook.com/gametreetribe/" target="_blank" class="link"><i class="icon-facebook"></i></a><a href="https://www.instagram.com/gametreeapp/" target="_blank" class="link"><i class="icon-instagram"></i></a><a href="https://vk.com/gametreeapp" target="_blank" class="link"><i class="icon-vkontakte"></i></a></div>
+        <div class="wrapper-ico"><span>Follow us on:&nbsp;</span><a href="http://blog.gametree.me/" target="_blank" class="link"><i class="icon-blogger"></i></a><a href="https://www.facebook.com/gametreetribe/" target="_blank" class="link"><i class="icon-facebook"></i></a><a href="https://www.instagram.com/gametreeapp/" target="_blank" class="link"><i class="icon-instagram"></i></a><a href="https://vk.com/gametreeapp" target="_blank" class="link"><i class="icon-vkontakte"></i></a></div>
       </div>
       <div class="row">
         <div class="large-8 large-centered">
@@ -285,7 +278,7 @@
               <li><a href="#about" target="_blank" class="link">Promote</a></li>
               <li><a href="#blog" target="_blank" class="link">Jobs</a></li>
               <li><a href="#contact-us" target="_blank" class="link">Developers</a></li>
-              <li><a href="mailto:help@gametree.me" target="_blank" class="link">Contact</a></li>
+              <li><a href="http://blog.gametree.me/contact-form/" target="_blank" class="link">Contact</a></li>
             </ul>
           </div>
           <div class="large-4 columns">
@@ -305,10 +298,8 @@
             <tbody>
               <tr>
                 <td><a href="https://twitter.com/intent/tweet?text=Hello%20world" data-size="normal" class="twitter-share-button">Tweet</a></td>
-                <td>
-                  <div id="vk_like">
-                    <script type="text/javascript">VK.Widgets.Like("vk_like", {type: "button", height: 20});</script>
-                  </div>
+                <td class="vkshare">
+                  <script type="text/javascript">document.write(VK.Share.button(false, {type: "round", text: "Share"}));</script>
                 </td>
                 <td>
                   <div data-href="http://gametree.me/" data-layout="button_count" class="fb-share-button"></div>

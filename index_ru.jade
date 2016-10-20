@@ -1,14 +1,16 @@
 doctype html
-html(lang='en')
+html(lang='ru')
     head
         meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1")
         title
             | GameTree
         //- link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/foundation.min.css")
+        //link(href='https://fonts.googleapis.com/css?family=Lora|Open+Sans|Ubuntu', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet')
         link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/foundation.css")
         link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/main.css")
-        link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/fonts.css")
+        //- link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/fonts.css")
         link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/fontello.css")
         link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/animate.css")
         //- link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/dropdown-lang.css")
@@ -16,14 +18,14 @@ html(lang='en')
 
         //- script(type='text/javascript', src='https://vk.com/js/api/openapi.js?133')
         script(type='text/javascript', src='http://vk.com/js/api/share.js?94', charset='windows-1251')
-    body
+    body.ru-lang
         script.
             (function (d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0];
                 if (d.getElementById(id)) return;
                 js = d.createElement(s);
                 js.id = id;
-                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+                js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.6";
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
         script.
@@ -51,9 +53,9 @@ html(lang='en')
                 //-     option.ru(value='http://ru.gametree.me/')
                     //- option.en(value='2')
                 .language-wrapper
-                    .en.active
-                    .ru.not-active
-                        a.link(href='http://ru.gametree.me/')
+                    .ru.active
+                    .en.not-active
+                        a.link(href='http://gametree.me/')
             .row
                 .card-container
                     .flipper-card-container
@@ -62,16 +64,16 @@ html(lang='en')
                                 img(src='img/logo-header.png')
                                 span Beta
                             .card-main-text.bounceInRight.animated
-                                | Discover&nbsp;
-                                span games
-                                | &nbsp;you will like.
+                                | Находи новые&nbsp;
+                                span игры
+                                | &nbsp;и
                                 br
-                                | Experience them with&nbsp;
-                                span.special friends
-                                | .
-                            #button-one.my-button.fadeIn.animated SECURE MY SPOT
+                                | играй в них с&nbsp;
+                                span.special друзьями
+                                | !
+                            #button-one.my-button.fadeIn.animated Регистрация
                             a.link.link-down.my-button(href="#nav")
-                                | How It Works
+                                | Как это работает?
                             //- .arrow_box.show-for-large
                             a.link.arrow_box.show-for-large(href="#nav")
                         .header-card.card-two
@@ -79,48 +81,48 @@ html(lang='en')
                                 form#ema_signup_form.card-form(accept-charset='UTF-8', action='https://gem.godaddy.com/signups/subscribe/297384', method='post', target='_blank')
                                     div(style='margin:0;padding:0;display:inline')
                                         input(name='utf8', type='hidden', value='✓')
-                                        input#signup_lang(name='signup[lang]', type='hidden', value='en')
+                                        input#signup_lang(name='signup[lang]', type='hidden', value='ru')
                                     .mimi_field.required
-                                        | I,
+                                        | Я,
                                         //- input.name(type='text' placeholder='(your name)')
                                         input#signup_name.name(
                                             name='signup[name]',
                                             type='text',
-                                            data-required-field='This field is required',
-                                            placeholder='(your name)'
+                                            data-required-field='Пустое поле',
+                                            placeholder='(ваше имя)'
                                             )
-                                        | , would like to journey
-                                        | forth into this new world of games. Please send my
-                                        | invite to @
+                                        | , хотел бы отправиться в путешествие в новый мир
+                                        | игр. Пожалуйста, пришлите моё приглашение
+                                        | на адрес:
                                     .mimi_field.required
                                         //- input.email(type='text' placeholder='(your email)')
                                         input#signup_email.email(
                                             name='signup[email]',
                                             type='text',
-                                            data-required-field='This field is required',
-                                            placeholder='(your email)'
+                                            data-required-field='Пустое поле',
+                                            placeholder='(ваш имейл)'
                                             )
                                         | .
                                     .mimi_field
                                         input#webform_submit_button.submit.my-button(
                                             type='submit',
-                                            value='SECURE MY SPOT',
-                                            data-default-text='Subscribe',
-                                            data-submitting-text='Sending...',
-                                            data-invalid-text='↑ You forgot some required fields',
+                                            value='Регистрация',
+                                            data-default-text='Отправить',
+                                            data-submitting-text='Отправляется...',
+                                            data-invalid-text='↑ Поле не заполнено',
                                             data-choose-list='↑ Choose a list',
-                                            data-thanks='Thank you!'
+                                            data-thanks='Спасибо, что вы с нами!'
                                             )
-                            //- #button-two.my-button.position SECURE MY SPOT
+                            //- #button-two.my-button.position Регистрация
                             a.link.link-down.my-button(href="#nav")
-                                | How It Works
+                                | Как это работает?
                             a.link.arrow_box.show-for-large(href="#nav")
                             //- .arrow_box.show-for-large
                     .header-card.card-three
                         .card-main-text.position
-                            | Thank you for joining us!
+                            | Спасибо, что вы с нами!
                         a.link.link-down.my-button(href="#nav")
-                            | How It Works
+                            | Как это работает?
                         a.link.arrow_box.show-for-large(href="#nav")
                         //- .arrow_box.show-for-large
         //- Nav should stick after top touches top of screen, not bottom. Make everything about 5px shorter
@@ -129,68 +131,67 @@ html(lang='en')
                 .row
                     .title-bar(data-responsive-toggle='my-menu', data-hide-for='large')
                         button.menu-icon(type='button', data-toggle='')
-                        .title-bar-title Menu
+                        .title-bar-title Меню
                     #my-menu.top-bar
                         ul.dropdown.menu(data-dropdown-menu='')
                             li
                                 a.link
                                     img(src='img/logo-nav.png')
                             li
-                                a.link.games(href='http://blog.gametree.me/mission/' target="_blank") About
+                                a.link.games(href='http://blog.gametree.me/mission/' target="_blank") Про нас
                             li
-                                a.link.fiends(href='http://blog.gametree.me/' target="_blank") Blog
+                                a.link.fiends(href='http://blog.gametree.me/' target="_blank") Блог
                             li
-                                a.link.how-it-works(href='http://blog.gametree.me/contact-form/' target="_blank") Contact Us
+                                a.link.how-it-works(href='http://blog.gametree.me/contact-form/' target="_blank") Связаться с нами
                             li
                                 a.link.my-button.my-button-nav(href="#bottom-form")
-                                    | SECURE MY SPOT
+                                    | Регистрация
         section#section-one(data-magellan-target="section-one")
             .row.section-one
                 .columns.description
                     i
-                        | GameTree is about maximizing your fun by getting to know
-                        | who you are as a person and connecting you with the people
-                        | and experiences you didn’t even know you craved.
+                        | С помощью GameTree вы получите максимум удовольствия
+                        | от игр, благодаря уникальной технологии подбора игр под ваш вкус.
                     //- span.signature John Uke, GameTree
             .row.section-two
                 .large-4.columns
                     .box.blue
                         .circle
                             img(src='img/icons_advice.png')
-                        h2 Personalized Advice
+                        h2 Личные рекомендации
                         p
-                            | Read reviews from your most relevant
-                            | friends and people like you.
+                            | Читайте отзывы ваших друзей и таких же
+                            | игроков как вы.
                 .large-4.columns
                     .box.brown
                         .circle
                             img.jewel(src='img/icon_jewel.png')
-                        h2 Hidden Gems
+                        h2 Скрытые Сокровища
                         p
-                            | Discover new games and genres you will
-                            | like but would otherwise never know about.
+                            | Открывайте для себя новые игры и жанры,
+                            | о которых вы могли никогда и не узнать.
                 .large-4.columns
                     .box.yellow
                         .circle
                             img.gamefriends(src='img/icon_gamefriends.png')
-                        h2 Game With Friends
+                        h2 Играйте с друзьями
                         p
-                            | Find out which of your friends are interested
-                            | in the same game as you, or meet new ones.
+                            | Узнайте, кто из ваших друзей хотел бы играть
+                            | в те же игры что и вы. Или находите новых!
         section
             .row.section-four
                 .description
                     span
-                        strong How It Works&nbsp;
-                    | Without getting too technical (unless, that`s your
-                    | thing then,&nbsp;
-                    a.link.link-underline(href='https://medium.com/game-tree/personality-the-key-of-lenses-and-likes-ac997cbb51e1#.ao2h6sld6' target="_blank") here you go
-                    | ), GameTree leverages your
-                    | tastes, personality, and friend network to offer
-                    | personal recommendations that are
+                        strong Как это работает?&nbsp;
+                    | Не вдаваясь в технические подробности
+                    | (если интересно,&nbsp;
+                    a.link.link-underline(href='https://medium.com/game-tree/personality-the-key-of-lenses-and-likes-ac997cbb51e1#.ao2h6sld6' target="_blank") вот, пожалуйста
+                    | ), GameTree анализирует ваши предпочтения, характер и
+                    | круг общения, чтобы предложить индивидуальные
+                    | рекомендации. Они на
                     i
-                        strong &nbsp;65% more accurate&nbsp;
-                    | than user-voted averages.
+                        strong &nbsp;65% более точные&nbsp;
+                    | , чем статистика отзывов пользователей.
             .row.section-five
                 //- these will have new style with text filled boxes connected to image circles (check Skype)
                 .playing-cards-wrapper
@@ -198,26 +199,26 @@ html(lang='en')
                         div.data
                             img.avatar(src='img/jacklondon.png')
                             span.name.text-left boblikesoup
-                            span.head.text-left Entrepreneur
-                            span.head.text-left Pioneer
+                            span.head.text-left Предприниматель
+                            span.head.text-left Первооткрыватель
                             span.small-ico.mouse
                             span.small-ico.cube
                         div
-                            div.head Likes
+                            div.head Любит:
                                 p
-                                    u Competition
+                                    u Соперничество
                                     | ,&nbsp;
-                                    u challenge
-                                    | , and&nbsp;
-                                    u fellowship.
-                            div.head Motivated by
+                                    u трудности
+                                    | , и&nbsp;
+                                    u товарищество.
+                            div.head Мотивации:
                                 p
-                                    u Achievement
+                                    u Достижения
                                     | ,&nbsp;
-                                    u enthusiasm
-                                    | , and&nbsp;
-                                    u doing good.
-                            span.foot Interested In Playing
+                                    u энтузиазм
+                                    | , и&nbsp;
+                                    u успешное выполнение задач.
+                            span.foot Предпочитает игры:
                         div.games
                             img(src='img/game-1.jpg')
                             img(src='img/game-2.jpg')
@@ -226,26 +227,26 @@ html(lang='en')
                         div.data
                             img.avatar(src='img/jacklondon.png')
                             span.name.text-left boblikesoup
-                            span.head.text-left Entrepreneur
-                            span.head.text-left Pioneer
+                            span.head.text-left Предприниматель
+                            span.head.text-left Первооткрыватель
                             span.small-ico.mouse
                             span.small-ico.cube
                         div
-                            div.head Likes
+                            div.head Любит:
                                 p
-                                    u Competition
+                                    u Соперничество
                                     | ,&nbsp;
-                                    u challenge
-                                    | , and&nbsp;
-                                    u fellowship.
-                            div.head Motivated by
+                                    u трудности
+                                    | , и&nbsp;
+                                    u товарищество.
+                            div.head Мотивации:
                                 p
-                                    u Achievement
+                                    u Достижения
                                     | ,&nbsp;
-                                    u enthusiasm
-                                    | , and&nbsp;
-                                    u doing good.
-                            span.foot Interested In Playing
+                                    u энтузиазм
+                                    | , и&nbsp;
+                                    u успешное выполнение задач.
+                            span.foot Предпочитает игры:
                         div.games
                             img(src='img/game-1.jpg')
                             img(src='img/game-2.jpg')
@@ -254,26 +255,26 @@ html(lang='en')
                         div.data
                             img.avatar(src='img/jacklondon.png')
                             span.name.text-left boblikesoup
-                            span.head.text-left Entrepreneur
-                            span.head.text-left Pioneer
+                            span.head.text-left Предприниматель
+                            span.head.text-left Первооткрыватель
                             span.small-ico.mouse
                             span.small-ico.cube
                         div
-                            div.head Likes
+                            div.head Любит:
                                 p
-                                    u Competition
-                                    |,&nbsp;
-                                    u challenge
-                                    | , and&nbsp;
-                                    u fellowship.
-                            div.head Motivated by
+                                    u Соперничество
+                                    | ,&nbsp;
+                                    u трудности
+                                    | , и&nbsp;
+                                    u товарищество.
+                            div.head Мотивации:
                                 p
-                                    u Achievement
-                                    |,&nbsp;
-                                    u enthusiasm
-                                    |, and&nbsp;
-                                    u doing good.
-                            span.foot Interested In Playing
+                                    u Достижения
+                                    | ,&nbsp;
+                                    u энтузиазм
+                                    | , и&nbsp;
+                                    u успешное выполнение задач.
+                            span.foot Предпочитает игры:
                         div.games
                             img(src='img/game-1.jpg')
                             img(src='img/game-2.jpg')
@@ -285,42 +286,42 @@ html(lang='en')
                         ul.orbit-container
                             .card-bottom
                                 .card-main-text.position
-                                    | Thank you for joining us!
+                                    | Спасибо, что вы с нами!
                             li.orbit-slide.active
                                 div
                                     .card-main-text
                                         form#ema_bottom_signup_form.card-form(accept-charset='UTF-8', action='https://gem.godaddy.com/signups/subscribe/297384', method='post', target='_blank')
                                             div(style='margin:0;padding:0;display:inline')
                                                 input(name='utf8', type='hidden', value='✓')
-                                                input#signup_bottom_lang(name='signup[lang]', type='hidden', value='en')
+                                                input#signup_bottom_lang(name='signup[lang]', type='hidden', value='ru')
                                             .mimi_field.required
-                                                | I,
+                                                | Я,
                                                 //- input.name(type='text' placeholder='(your name)')
                                                 input#signup_bottom_name.name(
                                                 name='signup[name]',
                                                 type='text',
-                                                data-required-field='This field is required',
-                                                placeholder='(your name)'
+                                                data-required-field='Пустое поле',
+                                                placeholder='(ваше имя)'
                                                 )
-                                                | , would like to journey
-                                                | forth into this new world of games. Please send my
-                                                | invite to @
+                                                | , хотел бы отправиться в путешествие в новый мир
+                                                | игр. Пожалуйста, пришлите моё приглашение
+                                                | на адрес:
                                             .mimi_field.required
                                                 //- input.email(type='text' placeholder='(your email)')
                                                 input#signup_bottom_email.email(
                                                 name='signup[email]',
                                                 type='text',
-                                                data-required-field='This field is required',
-                                                placeholder='(your email)'
+                                                data-required-field='Пустое поле',
+                                                placeholder='(ваш email)'
                                                 )
                                                 | .
                                             .mimi_field
                                                 input#webform_bottom_submit_button.submit.my-button-orbit(
                                                 type='submit',
-                                                value='Journey With Us',
-                                                data-default-text='Subscribe',
-                                                data-submitting-text='Sending...',
-                                                data-invalid-text='↑ You forgot some required fields',
+                                                value='Присоединяйтесь к нам',
+                                                data-default-text='Отправить',
+                                                data-submitting-text='Отправляется...',
+                                                data-invalid-text='↑ Поле не заполнено',
                                                 data-choose-list='↑ Choose a list',
                                                 data-thanks='Thank you!'
                                                 )
@@ -337,18 +338,17 @@ html(lang='en')
                                     img(src='img/Jesse-Schell-Casual-Headshot.jpg')
                                     p.text-center
                                         i
-                                            | “GameTree has the potential to be a revolutionary social
-                                            | network that is based both on the secrets of player psychology
-                                            | and our deep love of games.”
+                                            | “GameTree может стать революционной социальной сетью, основанной на
+                                            | секретах психологии игроков и нашей огромной любви к играм”
                                     //- h3.text-center Jesse Schell
                                     div.bottom
                                         i
-                                            strong Jesse Schell&nbsp;
-                                            | CEO of&nbsp;
+                                            strong Джесси Шелль&nbsp;
+                                            | Исполнительный директор&nbsp;
                                             a.link.link-underline(href="https://www.schellgames.com/about" target="_blank")
                                                 | Schell Games
                                             //- Link to https://www.schellgames.com/about + green styling on all body links
-                                            | &nbspand Author of&nbsp;
+                                            | , автор книги&nbsp;
                                             a.link.link-underline(href="https://www.amazon.com/Art-Game-Design-Lenses-Second/dp/1466598646/ref=sr_1_1?ie=UTF8&qid=1476383649&sr=8-1" target="_blank")
                                                 | The Art of Game Design&nbsp;
                                             //- Link to https://www.amazon.com/Art-Game-Design-Lenses-Second/dp/1466598646/ref=sr_1_1?ie=UTF8&qid=1476383649&sr=8-1
@@ -362,7 +362,7 @@ html(lang='en')
         footer.footer
             .row
                 .wrapper-ico
-                    span Follow us on:&nbsp;
+                    span Мы в социальных сетях:&nbsp;
                     a.link(href='http://blog.gametree.me/' target="_blank")
                         i.icon-blogger
                     a.link(href='https://www.facebook.com/gametreetribe/' target="_blank")
@@ -376,39 +376,39 @@ html(lang='en')
                     .large-4.columns
                         ul
                             li
-                                strong Learn
+                                strong Изучай
                             li
-                                a.link(href='http://blog.gametree.me/mission/' target="_blank") About
+                                a.link(href='http://blog.gametree.me/mission/' target="_blank") О нас
                             li
-                                a.link(href='http://blog.gametree.me/' target="_blank") Blog
+                                a.link(href='http://blog.gametree.me/' target="_blank") Блог
                             li
-                                a.link(href='#contact-us' target="_blank") Our Journey
+                                a.link(href='#contact-us' target="_blank") Наш путь
                             li
-                                a.link(href='#contact-us' target="_blank") Privacy Policy
+                                a.link(href='#contact-us' target="_blank") Политика конфиденциальности
                     .large-4.columns
                         ul
                             li
-                                strong Engage
+                                strong Прими участие
                             li
-                                a.link(href='#about' target="_blank") Promote
+                                a.link(href='#about' target="_blank") Продвижение
                             li
-                                a.link(href='#blog' target="_blank") Jobs
+                                a.link(href='#blog' target="_blank") Работа
                             li
-                                a.link(href='#contact-us' target="_blank") Developers
+                                a.link(href='#contact-us' target="_blank") Разработчики
                             li
-                                a.link(href='http://blog.gametree.me/contact-form/' target="_blank") Contact
+                                a.link(href='http://blog.gametree.me/contact-form/' target="_blank") Контакты
                     .large-4.columns
                         ul
                             li
-                                strong Business
+                                strong Для бизнес предложений
                             li
-                                a.link(href='#about' target="_blank") Press
+                                a.link(href='#about' target="_blank") Пресс релизы
                             li
-                                a.link(href='#blog' target="_blank") Invest
+                                a.link(href='#blog' target="_blank") Для инвесторов
                             li
-                                a.link(href='#contact-us' target="_blank") Opportunities
+                                a.link(href='#contact-us' target="_blank") Возможности
                             li
-                                a.link(href='#contact-us' target="_blank") Store Owners
+                                a.link(href='#contact-us' target="_blank") Владельцам магазинов
             .row
                 .share-wrapper
                     table
@@ -419,7 +419,7 @@ html(lang='en')
                                         | Tweet
                                 td.vkshare
                                     script(type='text/javascript').
-                                        document.write(VK.Share.button(false, {type: "round", text: "Share"}));
+                                        document.write(VK.Share.button(false,{type: "round", text: "Поделиться"}));
                                 td
                                     .fb-share-button(
                                     data-href='http://gametree.me/',
