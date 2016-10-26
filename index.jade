@@ -5,74 +5,84 @@ html(lang='en')
         meta(name="viewport" content="width=device-width, initial-scale=1")
         title
             | GameTree
-        //- link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/foundation.min.css")
-        link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/foundation.css")
-        link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/main.css")
-        link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/fonts.css")
-        link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/fontello.css")
-        link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/animate.css")
-        //- link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/dropdown-lang.css")
-        link(rel='icon', type='image/x-icon', href='img/favicon.ico?v1')
+        link(type="text/css", rel="stylesheet", rev="stylesheet", href="landing_files/style/foundation.min.css")
+        link(type="text/css", rel="stylesheet", rev="stylesheet", href="landing_files/style/main.css")
+        link(type="text/css", rel="stylesheet", rev="stylesheet", href="landing_files/style/fontello.css")
+        link(type="text/css", rel="stylesheet", rev="stylesheet", href="landing_files/style/animate.css")
+        link(type="text/css", rel="stylesheet", rev="stylesheet", href="landing_files/style/animated-headline.css")
+        link(rel='icon', type='image/x-icon', href='landing_files/img/favicon.ico?v1')
 
-        //- script(type='text/javascript', src='https://vk.com/js/api/openapi.js?133')
+        script(type="text/javascript", src="landing_files/js/jquery-2.1.1.js")
+        script(type="text/javascript", src="landing_files/js/foundation.min.js")
+
         script(type='text/javascript', src='http://vk.com/js/api/share.js?94', charset='windows-1251')
-    body
+        script(type='text/javascript').
+            (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=A142Rs6FIIQ89gUTPxUf14zrVpIEsASFrVC7*e2T6ZGByPyua7MQZwjLg2k4ntwXtVRnwITb6oRR2gDwpt71By456bwiFtX7lAnBbJxzL8JCjpVLiGCnSgGyU/aQsFKP0aQ9eENzaVxbaxq8RwMoYViI7fn7DI04ip*6jEjAXeM-&pixel_id=1000032363';
+
+        // Facebook Pixel Code
         script.
-            (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        script.
-            window.twttr = (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0],
-                        t = window.twttr || {};
-                if (d.getElementById(id)) return t;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "https://platform.twitter.com/widgets.js";
-                fjs.parentNode.insertBefore(js, fjs);
-                t._e = [];
-                t.ready = function (f) {
-                    t._e.push(f);
+            !function (f, b, e, v, n, t, s) {
+                if (f.fbq)return;
+                n = f.fbq = function () {
+                    n.callMethod ?
+                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
                 };
-                return t;
-            }(document, "script", "twitter-wjs"));
+                if (!f._fbq)f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = '2.0';
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window,
+                    document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '113892682416006'); // Insert your pixel ID here.
+            fbq('track', 'PageView');
+        noscript
+            img(height='1', width='1', style='display:none', src='https://www.facebook.com/tr?id=113892682416006&ev=PageView&noscript=1')
+        // DO NOT MODIFY
+        // End Facebook Pixel Code
+
+    body
 
         <!-- HEADER -->
         header.header(data-magellan, data-bar-offset='-30')
             .language
-                //- Hide flag option that’s already selected and make others hidden until acted upon. Mouseover on web, click on mobile.
-                //- select#cd-dropdown.cd-select(name='cd-dropdown', onchange='window.location.href=this.value')
-                //-     option(value='-1', selected='')
-                //-     option.ru(value='http://ru.gametree.me/')
-                    //- option.en(value='2')
                 .language-wrapper
                     .en.active
                     .ru.not-active
-                        a.link(href='http://ru.gametree.me/')
+                        a.link(href='http://gametree.me/ru')
             .row
                 .card-container
                     .flipper-card-container
-                        .header-card.card-one
+                        .header-card.card-one.cd-intro
                             .logo.bounceInLeft.animated
-                                img(src='img/logo-header.png')
+                                img(src='landing_files/img/logo-header.png')
                                 span Beta
-                            .card-main-text.bounceInRight.animated
-                                | Discover&nbsp;
-                                span games
-                                | &nbsp;you will like.
+                            .card-main-text.bounceInRight.animated.cd-headline.rotate-1
+                                | The world is a big place.
                                 br
-                                | Experience them with&nbsp;
-                                span.special friends
-                                | .
+                                | GameTree tells you which&nbsp;
+                                span.cd-words-wrapper
+                                    b.is-visible tabletop
+                                    b computer
+                                    b mobile
+                                    b console
+                                br
+                                | games you'll like and who to play them with.
+                                //| Discover&nbsp;
+                                //span games
+                                //| &nbsp;you will like.
+                                //br
+                                //| Experience them with&nbsp;
+                                //span.special friends
+                                //| .
                             #button-one.my-button.fadeIn.animated SECURE MY SPOT
                             a.link.link-down.my-button(href="#nav")
                                 | How It Works
-                            //- .arrow_box.show-for-large
                             a.link.arrow_box.show-for-large(href="#nav")
                         .header-card.card-two
                             .card-main-text
@@ -82,22 +92,20 @@ html(lang='en')
                                         input#signup_lang(name='signup[lang]', type='hidden', value='en')
                                     .mimi_field.required
                                         | I,
-                                        //- input.name(type='text' placeholder='(your name)')
                                         input#signup_name.name(
                                             name='signup[name]',
                                             type='text',
-                                            data-required-field='This field is required',
+                                            data-required-field='Empty field',
                                             placeholder='(your name)'
                                             )
                                         | , would like to journey
                                         | forth into this new world of games. Please send my
                                         | invite to @
                                     .mimi_field.required
-                                        //- input.email(type='text' placeholder='(your email)')
                                         input#signup_email.email(
                                             name='signup[email]',
                                             type='text',
-                                            data-required-field='This field is required',
+                                            data-required-field='Empty field',
                                             placeholder='(your email)'
                                             )
                                         | .
@@ -107,23 +115,19 @@ html(lang='en')
                                             value='SECURE MY SPOT',
                                             data-default-text='Subscribe',
                                             data-submitting-text='Sending...',
-                                            data-invalid-text='↑ You forgot some required fields',
+                                            data-invalid-text='↑ Please fill empty fields',
                                             data-choose-list='↑ Choose a list',
                                             data-thanks='Thank you!'
                                             )
-                            //- #button-two.my-button.position SECURE MY SPOT
                             a.link.link-down.my-button(href="#nav")
                                 | How It Works
                             a.link.arrow_box.show-for-large(href="#nav")
-                            //- .arrow_box.show-for-large
                     .header-card.card-three
                         .card-main-text.position
                             | Thank you for joining us!
                         a.link.link-down.my-button(href="#nav")
                             | How It Works
                         a.link.arrow_box.show-for-large(href="#nav")
-                        //- .arrow_box.show-for-large
-        //- Nav should stick after top touches top of screen, not bottom. Make everything about 5px shorter
         nav#nav.nav(data-sticky-container='', data-magellan, data-bar-offset='100', data-threshold='')
             div(data-sticky='',data-sticky-on='small', data-top-anchor="nav", data-options='marginTop:0;', style='width:100%')
                 .row
@@ -134,7 +138,7 @@ html(lang='en')
                         ul.dropdown.menu(data-dropdown-menu='')
                             li
                                 a.link
-                                    img(src='img/logo-nav.png')
+                                    img(src='landing_files/img/logo-nav.png')
                             li
                                 a.link.games(href='http://blog.gametree.me/mission/' target="_blank") About
                             li
@@ -148,15 +152,16 @@ html(lang='en')
             .row.section-one
                 .columns.description
                     i
-                        | GameTree is about maximizing your fun by getting to know
-                        | who you are as a person and connecting you with the people
-                        | and experiences you didn’t even know you craved.
-                    //- span.signature John Uke, GameTree
+                        | The world of gaming has never been more crowded and
+                        | noisy. GameTree connects you with the best people and&nbsp;
+                        span.yellow experiences
+                        |, so you can spend less time searching, and
+                        | more doing what we all love, having fun.
             .row.section-two
                 .large-4.columns
                     .box.blue
                         .circle
-                            img(src='img/icons_advice.png')
+                            img(src='landing_files/img/icons_advice.png')
                         h2 Personalized Advice
                         p
                             | Read reviews from your most relevant
@@ -164,7 +169,7 @@ html(lang='en')
                 .large-4.columns
                     .box.brown
                         .circle
-                            img.jewel(src='img/icon_jewel.png')
+                            img.jewel(src='landing_files/img/icon_jewel.png')
                         h2 Hidden Gems
                         p
                             | Discover new games and genres you will
@@ -172,7 +177,7 @@ html(lang='en')
                 .large-4.columns
                     .box.yellow
                         .circle
-                            img.gamefriends(src='img/icon_gamefriends.png')
+                            img.gamefriends(src='landing_files/img/icon_gamefriends.png')
                         h2 Game With Friends
                         p
                             | Find out which of your friends are interested
@@ -192,92 +197,97 @@ html(lang='en')
                         strong &nbsp;65% more accurate&nbsp;
                     | than user-voted averages.
             .row.section-five
-                //- these will have new style with text filled boxes connected to image circles (check Skype)
                 .playing-cards-wrapper
                     .playing-cards
                         div.data
-                            img.avatar(src='img/jacklondon.png')
-                            span.name.text-left boblikesoup
+                            img.avatar(src='landing_files/img/jacklondon.png')
+                            span.name.my-label.yellow.text-left boblikesoup
                             span.head.text-left Entrepreneur
                             span.head.text-left Pioneer
-                            span.small-ico.mouse
-                            span.small-ico.cube
+                            span.small-ico.mouse.my-label
+                            span.small-ico.cube.my-label
                         div
-                            div.head Likes
+                            div.head
+                                span.my-label.blue Likes
                                 p
                                     u Competition
                                     | ,&nbsp;
                                     u challenge
                                     | , and&nbsp;
                                     u fellowship.
-                            div.head Motivated by
+                            div.head
+                                span.my-label.brown Motivated by
                                 p
                                     u Achievement
                                     | ,&nbsp;
                                     u enthusiasm
                                     | , and&nbsp;
                                     u doing good.
-                            span.foot Interested In Playing
+                            span.foot Wants To Play
                         div.games
-                            img(src='img/game-1.jpg')
-                            img(src='img/game-2.jpg')
-                            img(src='img/game-3.jpg')
+                            img(src='landing_files/img/game-1.jpg')
+                            img(src='landing_files/img/game-2.jpg')
+                            img(src='landing_files/img/game-3.jpg')
                     .playing-cards
                         div.data
-                            img.avatar(src='img/jacklondon.png')
-                            span.name.text-left boblikesoup
+                            img.avatar(src='landing_files/img/jacklondon.png')
+                            span.name.my-label.yellow.text-left boblikesoup
                             span.head.text-left Entrepreneur
                             span.head.text-left Pioneer
-                            span.small-ico.mouse
-                            span.small-ico.cube
+                            span.small-ico.mouse.my-label
+                            span.small-ico.cube.my-label
                         div
-                            div.head Likes
+                            div.head
+                                span.my-label.blue Likes
                                 p
                                     u Competition
                                     | ,&nbsp;
                                     u challenge
                                     | , and&nbsp;
                                     u fellowship.
-                            div.head Motivated by
+                            div.head
+                                span.my-label.brown Motivated by
                                 p
                                     u Achievement
                                     | ,&nbsp;
                                     u enthusiasm
                                     | , and&nbsp;
                                     u doing good.
-                            span.foot Interested In Playing
+                            span.foot Wants To Play
                         div.games
-                            img(src='img/game-1.jpg')
-                            img(src='img/game-2.jpg')
-                            img(src='img/game-3.jpg')
+                            img(src='landing_files/img/game-1.jpg')
+                            img(src='landing_files/img/game-2.jpg')
+                            img(src='landing_files/img/game-3.jpg')
                     .playing-cards
                         div.data
-                            img.avatar(src='img/jacklondon.png')
-                            span.name.text-left boblikesoup
+                            img.avatar(src='landing_files/img/jacklondon.png')
+                            span.name.my-label.yellow.text-left boblikesoup
                             span.head.text-left Entrepreneur
                             span.head.text-left Pioneer
-                            span.small-ico.mouse
-                            span.small-ico.cube
+                            span.small-ico.mouse.my-label
+                            span.small-ico.cube.my-label
                         div
-                            div.head Likes
+                            div.head
+                                span.my-label.blue Likes
                                 p
                                     u Competition
-                                    |,&nbsp;
+                                    | ,&nbsp;
                                     u challenge
                                     | , and&nbsp;
                                     u fellowship.
-                            div.head Motivated by
+                            div.head
+                                span.my-label.brown Motivated by
                                 p
                                     u Achievement
-                                    |,&nbsp;
+                                    | ,&nbsp;
                                     u enthusiasm
-                                    |, and&nbsp;
+                                    | , and&nbsp;
                                     u doing good.
-                            span.foot Interested In Playing
+                            span.foot Wants To Play
                         div.games
-                            img(src='img/game-1.jpg')
-                            img(src='img/game-2.jpg')
-                            img(src='img/game-3.jpg')
+                            img(src='landing_files/img/game-1.jpg')
+                            img(src='landing_files/img/game-2.jpg')
+                            img(src='landing_files/img/game-3.jpg')
         section.section-slideshow
             .row
                 .wrapper
@@ -295,22 +305,20 @@ html(lang='en')
                                                 input#signup_bottom_lang(name='signup[lang]', type='hidden', value='en')
                                             .mimi_field.required
                                                 | I,
-                                                //- input.name(type='text' placeholder='(your name)')
                                                 input#signup_bottom_name.name(
                                                 name='signup[name]',
                                                 type='text',
-                                                data-required-field='This field is required',
+                                                data-required-field='Empty field',
                                                 placeholder='(your name)'
                                                 )
                                                 | , would like to journey
                                                 | forth into this new world of games. Please send my
                                                 | invite to @
                                             .mimi_field.required
-                                                //- input.email(type='text' placeholder='(your email)')
                                                 input#signup_bottom_email.email(
                                                 name='signup[email]',
                                                 type='text',
-                                                data-required-field='This field is required',
+                                                data-required-field='Empty field',
                                                 placeholder='(your email)'
                                                 )
                                                 | .
@@ -320,38 +328,25 @@ html(lang='en')
                                                 value='Journey With Us',
                                                 data-default-text='Subscribe',
                                                 data-submitting-text='Sending...',
-                                                data-invalid-text='↑ You forgot some required fields',
+                                                data-invalid-text='↑ Please fill empty fields',
                                                 data-choose-list='↑ Choose a list',
                                                 data-thanks='Thank you!'
                                                 )
-                                        //- form.card-form
-                                        //-    | I,
-                                        //-    input.name(type='text' placeholder='(your name)')
-                                        //-    | , would like to journey forth
-                                        //-    | forth into this new world of games. Please send my
-                                        //-    | invite to @
-                                        //-    input.email(type='text' placeholder='(your email)')
-                                        //-    | .
-                                            //-input(type='submit' value="Journey With Us")
-                                    //- #button-three.my-button.my-button-orbit Journey With Us
-                                    img(src='img/Jesse-Schell-Casual-Headshot.jpg')
+                                    img(src='landing_files/img/Jesse-Schell-Casual-Headshot.jpg')
                                     p.text-center
                                         i
                                             | “GameTree has the potential to be a revolutionary social
                                             | network that is based both on the secrets of player psychology
                                             | and our deep love of games.”
-                                    //- h3.text-center Jesse Schell
                                     div.bottom
                                         i
                                             strong Jesse Schell&nbsp;
                                             | CEO of&nbsp;
                                             a.link.link-underline(href="https://www.schellgames.com/about" target="_blank")
                                                 | Schell Games
-                                            //- Link to https://www.schellgames.com/about + green styling on all body links
                                             | &nbspand Author of&nbsp;
                                             a.link.link-underline(href="https://www.amazon.com/Art-Game-Design-Lenses-Second/dp/1466598646/ref=sr_1_1?ie=UTF8&qid=1476383649&sr=8-1" target="_blank")
                                                 | The Art of Game Design&nbsp;
-                                            //- Link to https://www.amazon.com/Art-Game-Design-Lenses-Second/dp/1466598646/ref=sr_1_1?ie=UTF8&qid=1476383649&sr=8-1
                         //- Will be an automatic slideshow and only to the testimonials so don't need buttons
                         //- button.orbit-previous
                         //-     span.show-for-sr Previous Slide
@@ -452,12 +447,13 @@ html(lang='en')
             (function (d, w, c) {
                 (w[c] = w[c] || []).push(function () {
                     try {
-                        w.yaCounter40221379 = new Ya.Metrika({
-                            id: 40221379,
+                        w.yaCounter40349745 = new Ya.Metrika({
+                            id: 40349745,
                             clickmap: true,
                             trackLinks: true,
                             accurateTrackBounce: true,
-                            webvisor: true
+                            webvisor: true,
+                            trackHash: true
                         });
                     } catch (e) {
                     }
@@ -478,11 +474,33 @@ html(lang='en')
             })(document, window, "yandex_metrika_callbacks");
         noscript
             div
-                img(src='https://mc.yandex.ru/watch/40221379', style='position:absolute; left:-9999px;', alt='')
+                img(src='https://mc.yandex.ru/watch/40349745', style='position:absolute; left:-9999px;', alt='')
         // /Yandex.Metrika counter
-    script(type="text/javascript", src="js/jquery.min.js")
-    script(type="text/javascript", src="js/foundation.js")
-    script(type="text/javascript", src="js/velocity.min.js")
-    script(type="text/javascript", src="js/modernizr.custom.63321.js")
-    script(type="text/javascript", src="js/jquery.dropdown.js")
-    script(type="text/javascript", src="js/app.js")
+        script.
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        script.
+            window.twttr = (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                        t = window.twttr || {};
+                if (d.getElementById(id)) return t;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+                t._e = [];
+                t.ready = function (f) {
+                    t._e.push(f);
+                };
+                return t;
+            }(document, "script", "twitter-wjs"));
+
+    script(type="text/javascript", src="landing_files/js/velocity.min.js")
+    script(type="text/javascript", src="landing_files/js/animated-headline.js")
+    script(type="text/javascript", src="landing_files/js/app.min.js")

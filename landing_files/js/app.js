@@ -1,22 +1,10 @@
 $(document).foundation();
-
 $(function() {
     $('#button-one').click(function() {
         $('.card-one').addClass('rotate-one');
         //setTimeout("$('.card-two').addClass('rotate-two');", 1000);
         $('.card-two').addClass('rotate-two');
     });
-    // $('#webform_submit_button').click(function() {
-    //     $('.card-two').addClass('rotate-two-off-screen').fadeOut(1000);
-    //     setTimeout("$('.card-three').addClass('card-three-show');", 1000);
-    //     setTimeout(typeText, 3000);
-    // });
-    // $('#webform_bottom_submit_button').click(function() {
-    //     console.log('111');
-    //     $('.orbit-slide').addClass('rotate-two-off-screen').fadeOut(1000);
-    //     setTimeout("$('.card-bottom').addClass('card-three-show');", 1000);
-    //     setTimeout(typeText, 3000);
-    // });
 });
 /* play card */
 $(function(){
@@ -36,10 +24,6 @@ $(function(){
             $(this).removeClass('animated rotateIn');
         }
     );
-    // $('.section-two .box').hover(function(){
-    //         $(this).addClass('animated jello');
-    //     }
-    // );
     $(window).scroll(function() {
         var hT = $('.section-four').offset().top,
             hH = $('.section-four').outerHeight(),
@@ -67,21 +51,11 @@ $(function(){
             $('.playing-cards-wrapper').addClass('animated');
         }
     });
-    // $(window).load(function() {
-    //     $('.main-text').addClass('animated pulse');
-    // });
 });
 
-/* dropdown-lang */
-$( function() {
-    $( '#cd-dropdown' ).dropdown( {
-        gutter : 5
-    } );
-});
 /* form head */
 (function(global) {
     function serialize(form){if(!form||form.nodeName!=="FORM"){return }var i,j,q=[];for(i=form.elements.length-1;i>=0;i=i-1){if(form.elements[i].name===""){continue}switch(form.elements[i].nodeName){case"INPUT":switch(form.elements[i].type){case"text":case"hidden":case"password":case"button":case"reset":case"submit":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"checkbox":case"radio":if(form.elements[i].checked){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value))}break;case"file":break}break;case"TEXTAREA":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"SELECT":switch(form.elements[i].type){case"select-one":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"select-multiple":for(j=form.elements[i].options.length-1;j>=0;j=j-1){if(form.elements[i].options[j].selected){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].options[j].value))}}break}break;case"BUTTON":switch(form.elements[i].type){case"reset":case"submit":case"button":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break}break}}return q.join("&")};
-
 
     function extend(destination, source) {
         for (var prop in source) {
@@ -106,7 +80,6 @@ $( function() {
             });
         }
     };
-
     extend(Mimi.Signups.EmbedValidation.prototype, {
         initialize: function() {
             this.form         = document.getElementById('ema_signup_form');
@@ -360,16 +333,6 @@ $( function() {
             setTimeout("$('.card-three').addClass('card-three-show');", 1000);
             setTimeout(typeText, 3000);
         },
-
-        // showConfirmationText: function(html) {
-        //     var fields = this.form.querySelectorAll('.mimi_field');
-        //
-        //     for (var i = 0; i < fields.length; ++i) {
-        //         fields[i].style['display'] = 'none';
-        //     }
-        //
-        //     (this.form.querySelectorAll('fieldset')[0] || this.form).innerHTML = html;
-        // },
 
         disableForm: function() {
             var elements = this.form.elements;
@@ -699,16 +662,6 @@ $( function() {
             setTimeout("$('.card-bottom').addClass('card-three-show');", 1000);
             setTimeout(typeText, 3000);
         },
-
-        // showConfirmationText: function(html) {
-        //     var fields = this.form.querySelectorAll('.mimi_field');
-        //
-        //     for (var i = 0; i < fields.length; ++i) {
-        //         fields[i].style['display'] = 'none';
-        //     }
-        //
-        //     (this.form.querySelectorAll('fieldset')[0] || this.form).innerHTML = html;
-        // },
 
         disableForm: function() {
             var elements = this.form.elements;
