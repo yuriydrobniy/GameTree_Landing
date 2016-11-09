@@ -134,6 +134,9 @@
     display: block;
     border-bottom: 7px solid white;
   }
+  li a.how-it-works {
+    margin: 0!important;
+  }
   .nav .top-bar {
     padding: 0;
   }
@@ -160,11 +163,11 @@
     padding: 10% 15% 0 15%;
   }
   .card-main-text {
-    font-size: 24px;
+    font-size: 22px;
     line-height: normal;
   }
   .card-form .name, .card-form .email, .card-form input.required {
-    font-size: 24px;
+    font-size: inherit;
     width: 95%;
   }
   .section-slideshow .wrapper {

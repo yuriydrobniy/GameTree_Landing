@@ -1,13 +1,13 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'Helvetica Neue';
-  src: url(../fonts/HelveticaNeue.ttf); }
+  src: url(../fonts/helveticaneuecyr-roman.otf); }
 @font-face {
   font-family: 'Helvetica Neue Bold';
-  src: url(../fonts/HelveticaNeueBold.ttf); }
+  src: url(../fonts/helveticaneuecyr-bold.otf); }
 @font-face {
   font-family: 'Helvetica Neue Medium';
-  src: url(../fonts/HelveticaNeueMedium.ttf); }
+  src: url(../fonts/helveticaneuecyr-medium.otf); }
 @font-face {
   font-family: 'Handwriting';
   src: url(../fonts/9908.otf); }
@@ -28,6 +28,21 @@
 
 .yellow {
   background: #fee169; }
+
+.green {
+  background: #8bba29; }
+
+.t-brown {
+  color: #cf7229 !important; }
+
+.t-blue {
+  color: #699bfc !important; }
+
+.t-yellow {
+  color: #f1d150 !important; }
+
+.t-green {
+  color: #8bba29 !important; }
 
 body {
   font-family: 'Helvetica Neue', sans-serif;
@@ -95,7 +110,7 @@ td, th {
   font-weight: 400; }
 .ru-lang .playing-cards {
   font-weight: 700;
-  font-family: inherit; }
+  font-family: "Helvetica Neue", sans-serif; }
 .ru-lang .orbit-container .my-button, .ru-lang .orbit-container input.disabled, .ru-lang .orbit-container input.submit {
   width: auto;
   padding: 0 15px; }
@@ -187,7 +202,7 @@ td, th {
   border: none;
   background: #8bba29;
   margin: 0 auto;
-  margin-top: 2vh; }
+  margin-top: 5vh; }
   .orbit-container .my-button:hover, .orbit-container input.disabled:hover, .orbit-container input.submit:hover {
     background: #a7df31;
     transition: all 0.3s; }
@@ -195,6 +210,9 @@ td, th {
     background: #5d7c1b; }
 .orbit-container input.disabled {
   width: auto; }
+
+.mimi_field {
+  display: inline; }
 
 /**** lang_panel ****/
 .language-wrapper .active {
@@ -253,7 +271,8 @@ td, th {
   height: 100%;
   width: 100%;
   -moz-transform: perspective(1000px);
-  -moz-transform-style: preserve-3d; }
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
 
 .header-card {
   position: absolute;
@@ -300,7 +319,8 @@ td, th {
   padding-top: 2vh;
   padding-bottom: 2vh;
   font-size: 30px;
-  line-height: 48px; }
+  line-height: inherit;
+  font-family: "Helvetica Neue", sans-serif; }
   .card-main-text span {
     color: #cf7229;
     font-weight: bold;
@@ -317,15 +337,14 @@ td, th {
     border: 0px;
     border-bottom: 2px solid black;
     box-shadow: none;
-    padding-bottom: 24px;
-    padding-top: 20px;
     font-family: 'Handwriting', sans-serif;
     font-size: 36px;
     display: inline-block;
     margin: 0;
+    padding: 0;
     text-align: center; }
   .card-form .email {
-    width: 90%; }
+    width: 350px; }
 
 .card-one {
   transform: rotateY(0deg);
@@ -424,12 +443,13 @@ td, th {
     font-family: "Helvetica Neue Bold", sans-serif;
     font-size: 30px;
     display: table-cell;
-    text-align: center;
     padding: 0;
     margin: 0; }
     .nav li a {
       padding: 0;
       display: inline-block; }
+    .nav li a.games, .nav li a.fiends, .nav li a.how-it-works {
+      margin: 0 20px; }
   .nav .games {
     color: #cf7229; }
     .nav .games:hover {
@@ -473,11 +493,10 @@ td, th {
 
 /**** SECTION ONE ****/
 .section-one {
-  padding: 8vh 0; }
+  padding: 6vh 0; }
   .section-one .description {
     text-align: center;
     font-size: 26px;
-    font-family: 'Gotham Rounded', sans-serif;
     font-weight: 700; }
 
 /**** SECTION TWO ****/
@@ -487,8 +506,9 @@ td, th {
   box-sizing: border-box;
   border-radius: 200px 200px 10px 10px;
   font-size: 26px;
-  width: 300px;
-  margin: 0 auto; }
+  width: 306px;
+  margin: 0 auto;
+  height: 480px; }
   .section-two .box p {
     line-height: normal;
     font-family: 'Gotham Rounded', sans-serif;
@@ -548,7 +568,7 @@ td, th {
   .section-four .description {
     text-align: center;
     font-size: 24px;
-    font-family: 'Gotham Rounded', sans-serif; }
+    font-family: "Helvetica Neue", sans-serif; }
     .section-four .description span {
       display: block;
       text-align: center;
@@ -590,12 +610,16 @@ td, th {
     position: absolute;
     right: 10px; }
   .playing-cards .name {
-    font-size: 22px;
+    font-size: 22px; }
+  .playing-cards .my-label {
     display: inline-block;
     border-radius: 4px;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
     padding: 5px;
-    background: #fee169; }
+    padding-bottom: 3px;
+    color: black;
+    margin-bottom: 2px;
+    line-height: 22px; }
   .playing-cards .head {
     font-size: 18px;
     padding: 5px 0; }
@@ -622,14 +646,14 @@ td, th {
     margin-top: 5px;
     margin-bottom: 5px; }
     .playing-cards .small-ico.mouse {
-      background: url(../img/mouse.png) no-repeat;
+      background: url(../img/07.png) no-repeat, #8bba29;
       background-size: contain;
-      width: 24px;
+      width: 26px;
       height: 34px; }
     .playing-cards .small-ico.cube {
-      background: url("../img/cube.png") no-repeat;
+      background: url("../img/05.png") no-repeat, #8bba29;
       background-size: contain;
-      width: 34px;
+      width: 38px;
       height: 34px; }
   .playing-cards div div.head {
     padding: 0 24px; }
@@ -843,6 +867,9 @@ td, th {
     display: block;
     border-bottom: 7px solid white; }
 
+  li a.how-it-works {
+    margin: 0 !important; }
+
   .nav .top-bar {
     padding: 0; }
 
@@ -866,11 +893,11 @@ td, th {
     padding: 10% 15% 0 15%; }
 
   .card-main-text {
-    font-size: 24px;
+    font-size: 22px;
     line-height: normal; }
 
   .card-form .name, .card-form .email, .card-form input.required {
-    font-size: 24px;
+    font-size: inherit;
     width: 95%; }
 
   .section-slideshow .wrapper {

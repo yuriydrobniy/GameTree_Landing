@@ -3,56 +3,71 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GameTree</title>
-    <link type="text/css" rel="stylesheet" rev="stylesheet" href="style/foundation.css">
-    <link type="text/css" rel="stylesheet" rev="stylesheet" href="style/main.css">
-    <link type="text/css" rel="stylesheet" rev="stylesheet" href="style/fonts.css">
-    <link type="text/css" rel="stylesheet" rev="stylesheet" href="style/fontello.css">
-    <link type="text/css" rel="stylesheet" rev="stylesheet" href="style/animate.css">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico?v1">
+    <title>GameTree – is a friend recommendation platform for gamers</title>
+    <meta name="description" content="GameTree lets you discover games based on your personality and find new friends to play them with.">
+    <meta name="keywords" content="games, find friends, recommendations, app, ios, android">
+    <link type="text/css" rel="stylesheet" rev="stylesheet" href="./landing_files/style/foundation.min.css">
+    <link type="text/css" rel="stylesheet" rev="stylesheet" href="./landing_files/style/main.css?123">
+    <link type="text/css" rel="stylesheet" rev="stylesheet" href="./landing_files/style/fontello.css">
+    <link type="text/css" rel="stylesheet" rev="stylesheet" href="./landing_files/style/animate.css">
+    <link type="text/css" rel="stylesheet" rev="stylesheet" href="./landing_files/style/animated-headline.css">
+    <link rel="icon" type="image/x-icon" href="./landing_files/img/favicon.ico?v1">
+    <script type="text/javascript" src="./landing_files/js/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="./landing_files/js/foundation.min.js"></script>
     <script type="text/javascript" src="http://vk.com/js/api/share.js?94" charset="windows-1251"></script>
-  </head>
-  <body>
-    <script>
-      (function (d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s);
-          js.id = id;
-          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
-          fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <script>
-      window.twttr = (function (d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0],
-                  t = window.twttr || {};
-          if (d.getElementById(id)) return t;
-          js = d.createElement(s);
-          js.id = id;
-          js.src = "https://platform.twitter.com/widgets.js";
-          fjs.parentNode.insertBefore(js, fjs);
-          t._e = [];
-          t.ready = function (f) {
-              t._e.push(f);
-          };
-          return t;
-      }(document, "script", "twitter-wjs"));
+    <script type="text/javascript">
+      (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=A142Rs6FIIQ89gUTPxUf14zrVpIEsASFrVC7*e2T6ZGByPyua7MQZwjLg2k4ntwXtVRnwITb6oRR2gDwpt71By456bwiFtX7lAnBbJxzL8JCjpVLiGCnSgGyU/aQsFKP0aQ9eENzaVxbaxq8RwMoYViI7fn7DI04ip*6jEjAXeM-&pixel_id=1000032363';
       
-    </script><!-- HEADER -->
+    </script>
+    <!-- Facebook Pixel Code-->
+    <script>
+      !function (f, b, e, v, n, t, s) {
+          if (f.fbq)return;
+          n = f.fbq = function () {
+              n.callMethod ?
+                      n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          };
+          if (!f._fbq)f._fbq = n;
+          n.push = n;
+          n.loaded = !0;
+          n.version = '2.0';
+          n.queue = [];
+          t = b.createElement(e);
+          t.async = !0;
+          t.src = v;
+          s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s)
+      }(window,
+              document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '113892682416006'); // Insert your pixel ID here.
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=113892682416006&amp;ev=PageView&amp;noscript=1"></noscript>
+    <!-- DO NOT MODIFY-->
+    <!-- End Facebook Pixel Code-->
+  </head>
+  <body><!-- HEADER -->
     <header data-magellan data-bar-offset="-30" class="header">
       <div class="language">
         <div class="language-wrapper">
           <div class="en active"></div>
-          <div class="ru not-active"><a href="http://ru.gametree.me/" class="link"></a></div>
+          <div class="ru not-active"><a href="http://gametree.me/ru" class="link"></a></div>
         </div>
       </div>
       <div class="row">
         <div class="card-container">
           <div class="flipper-card-container">
-            <div class="header-card card-one">
-              <div class="logo bounceInLeft animated"><img src="img/logo-header.png"><span>Beta</span></div>
-              <div class="card-main-text bounceInRight animated">Discover&nbsp;<span>games</span>&nbsp;you will like.<br>Experience them with&nbsp;<span class="special">friends</span>.</div>
+            <div class="header-card card-one cd-intro">
+              <div class="logo bounceInLeft animated"><img src="./landing_files/img/logo-header.png"><span>Beta</span></div>
+              <div class="card-main-text bounceInRight animated cd-headline rotate-1">The world is a&nbsp;<span class="t-brown">BIG</span>&nbsp;place.<br><strong>GameTree</strong>&nbsp;tells you which&nbsp;<span class="cd-words-wrapper"><b class="t-brown is-visible">tabletop</b><b class="t-blue">computer</b><b class="t-yellow">mobile</b><b class="t-blue">console</b></span><br>games you'll&nbsp;<span class="t-blue">like</span>&nbsp;and who to&nbsp;<span class="t-yellow">play</span>&nbsp;them with.
+                <!--| Discover&nbsp;-->
+                <!--span games-->
+                <!--| &nbsp;you will like.-->
+                <!--br-->
+                <!--| Experience them with&nbsp;-->
+                <!--span.special friends-->
+                <!--| .-->
+              </div>
               <div id="button-one" class="my-button fadeIn animated">SECURE MY SPOT</div><a href="#nav" class="link link-down my-button">How It Works</a><a href="#nav" class="link arrow_box show-for-large"></a>
             </div>
             <div class="header-card card-two">
@@ -63,15 +78,15 @@
                     <input id="signup_lang" name="signup[lang]" type="hidden" value="en">
                   </div>
                   <div class="mimi_field required">I,
-                    <input id="signup_name" name="signup[name]" type="text" data-required-field="This field is required" placeholder="(your name)" class="name">, would like to journey
+                    <input id="signup_name" name="signup[name]" type="text" data-required-field="Empty field" placeholder="(your name)" class="name">, would like to journey
                     forth into this new world of games. Please send my
                     invite to @
                   </div>
                   <div class="mimi_field required">
-                    <input id="signup_email" name="signup[email]" type="text" data-required-field="This field is required" placeholder="(your email)" class="email">.
+                    <input id="signup_email" name="signup[email]" type="text" data-required-field="Empty field" placeholder="(your email)" class="email">.
                   </div>
                   <div class="mimi_field">
-                    <input id="webform_submit_button" type="submit" value="SECURE MY SPOT" data-default-text="Subscribe" data-submitting-text="Sending..." data-invalid-text="↑ You forgot some required fields" data-choose-list="↑ Choose a list" data-thanks="Thank you!" class="submit my-button">
+                    <input id="webform_submit_button" type="submit" value="SECURE MY SPOT" data-default-text="Subscribe" data-submitting-text="Sending..." data-invalid-text="↑ Please fill empty fields" data-choose-list="↑ Choose a list" data-thanks="Thank you!" class="submit my-button">
                   </div>
                 </form>
               </div><a href="#nav" class="link link-down my-button">How It Works</a><a href="#nav" class="link arrow_box show-for-large"></a>
@@ -92,11 +107,9 @@
           </div>
           <div id="my-menu" class="top-bar">
             <ul data-dropdown-menu="" class="dropdown menu">
-              <li><a class="link"><img src="img/logo-nav.png"></a></li>
-              <li><a href="http://blog.gametree.me/mission/" target="_blank" class="link games">About</a></li>
-              <li><a href="http://blog.gametree.me/" target="_blank" class="link fiends">Blog</a></li>
-              <li><a href="http://blog.gametree.me/contact-form/" target="_blank" class="link how-it-works">Contact Us</a></li>
-              <li><a href="#bottom-form" class="link my-button my-button-nav">SECURE MY SPOT</a></li>
+              <li class="text-left"><a class="link"><img src="./landing_files/img/logo-nav.png"></a></li>
+              <li><a href="http://blog.gametree.me/mission/" target="_blank" class="link games">About</a><a href="http://blog.gametree.me/" target="_blank" class="link fiends">Blog</a><a href="http://blog.gametree.me/contact-form/" target="_blank" class="link how-it-works">Contact Us</a></li>
+              <li class="text-right"><a href="#bottom-form" class="link my-button my-button-nav">SECURE MY SPOT</a></li>
             </ul>
           </div>
         </div>
@@ -104,16 +117,16 @@
     </nav>
     <section id="section-one" data-magellan-target="section-one">
       <div class="row section-one">
-        <div class="columns description"><i>
-            GameTree is about maximizing your fun by getting to know
-            who you are as a person and connecting you with the people
-            and experiences you didn’t even know you craved.</i>
+        <div class="columns description">
+          The world of gaming has never been more crowded and
+          noisy. GameTree connects you with the best people and&nbsp;<span>experiences</span>, so you can spend less time searching, and
+          more doing what we all love, having fun.
         </div>
       </div>
       <div class="row section-two">
         <div class="large-4 columns">
           <div class="box blue">
-            <div class="circle"><img src="img/icons_advice.png"></div>
+            <div class="circle"><img src="./landing_files/img/icons_advice.png"></div>
             <h2>Personalized Advice</h2>
             <p>
               Read reviews from your most relevant
@@ -123,7 +136,7 @@
         </div>
         <div class="large-4 columns">
           <div class="box brown">
-            <div class="circle"><img src="img/icon_jewel.png" class="jewel"></div>
+            <div class="circle"><img src="./landing_files/img/icon_jewel.png" class="jewel"></div>
             <h2>Hidden Gems</h2>
             <p>
               Discover new games and genres you will
@@ -133,7 +146,7 @@
         </div>
         <div class="large-4 columns">
           <div class="box yellow">
-            <div class="circle"><img src="img/icon_gamefriends.png" class="gamefriends"></div>
+            <div class="circle"><img src="./landing_files/img/icon_gamefriends.png" class="gamefriends"></div>
             <h2>Game With Friends</h2>
             <p>
               Find out which of your friends are interested
@@ -154,64 +167,64 @@
       <div class="row section-five">
         <div class="playing-cards-wrapper">
           <div class="playing-cards">
-            <div class="data"><img src="img/jacklondon.png" class="avatar"><span class="name text-left">boblikesoup</span><span class="head text-left">Entrepreneur</span><span class="head text-left">Pioneer</span><span class="small-ico mouse"></span><span class="small-ico cube"></span></div>
+            <div class="data"><img src="./landing_files/img/jacklondon.png" class="avatar"><span class="name my-label yellow text-left">boblikesoup</span><span class="head text-left">Entrepreneur</span><span class="head text-left">Pioneer</span><span class="small-ico mouse my-label"></span><span class="small-ico cube my-label"></span></div>
             <div>
-              <div class="head">Likes
+              <div class="head"><span class="my-label blue">Likes</span>
                 <p>
                   <u>Competition</u>,&nbsp;
                   <u>challenge</u>, and&nbsp;
                   <u>fellowship.</u>
                 </p>
               </div>
-              <div class="head">Motivated by
+              <div class="head"><span class="my-label brown">Motivated by</span>
                 <p>
                   <u>Achievement</u>,&nbsp;
                   <u>enthusiasm</u>, and&nbsp;
                   <u>doing good.</u>
                 </p>
-              </div><span class="foot">Interested In Playing</span>
+              </div><span class="foot">Wants To Play</span>
             </div>
-            <div class="games"><img src="img/game-1.jpg"><img src="img/game-2.jpg"><img src="img/game-3.jpg"></div>
+            <div class="games"><img src="./landing_files/img/game-1.jpg"><img src="./landing_files/img/game-2.jpg"><img src="./landing_files/img/game-3.jpg"></div>
           </div>
           <div class="playing-cards">
-            <div class="data"><img src="img/jacklondon.png" class="avatar"><span class="name text-left">boblikesoup</span><span class="head text-left">Entrepreneur</span><span class="head text-left">Pioneer</span><span class="small-ico mouse"></span><span class="small-ico cube"></span></div>
+            <div class="data"><img src="./landing_files/img/jacklondon.png" class="avatar"><span class="name my-label yellow text-left">boblikesoup</span><span class="head text-left">Entrepreneur</span><span class="head text-left">Pioneer</span><span class="small-ico mouse my-label"></span><span class="small-ico cube my-label"></span></div>
             <div>
-              <div class="head">Likes
+              <div class="head"><span class="my-label blue">Likes</span>
                 <p>
                   <u>Competition</u>,&nbsp;
                   <u>challenge</u>, and&nbsp;
                   <u>fellowship.</u>
                 </p>
               </div>
-              <div class="head">Motivated by
+              <div class="head"><span class="my-label brown">Motivated by</span>
                 <p>
                   <u>Achievement</u>,&nbsp;
                   <u>enthusiasm</u>, and&nbsp;
                   <u>doing good.</u>
                 </p>
-              </div><span class="foot">Interested In Playing</span>
+              </div><span class="foot">Wants To Play</span>
             </div>
-            <div class="games"><img src="img/game-1.jpg"><img src="img/game-2.jpg"><img src="img/game-3.jpg"></div>
+            <div class="games"><img src="./landing_files/img/game-1.jpg"><img src="./landing_files/img/game-2.jpg"><img src="./landing_files/img/game-3.jpg"></div>
           </div>
           <div class="playing-cards">
-            <div class="data"><img src="img/jacklondon.png" class="avatar"><span class="name text-left">boblikesoup</span><span class="head text-left">Entrepreneur</span><span class="head text-left">Pioneer</span><span class="small-ico mouse"></span><span class="small-ico cube"></span></div>
+            <div class="data"><img src="./landing_files/img/jacklondon.png" class="avatar"><span class="name my-label yellow text-left">boblikesoup</span><span class="head text-left">Entrepreneur</span><span class="head text-left">Pioneer</span><span class="small-ico mouse my-label"></span><span class="small-ico cube my-label"></span></div>
             <div>
-              <div class="head">Likes
+              <div class="head"><span class="my-label blue">Likes</span>
                 <p>
                   <u>Competition</u>,&nbsp;
                   <u>challenge</u>, and&nbsp;
                   <u>fellowship.</u>
                 </p>
               </div>
-              <div class="head">Motivated by
+              <div class="head"><span class="my-label brown">Motivated by</span>
                 <p>
                   <u>Achievement</u>,&nbsp;
                   <u>enthusiasm</u>, and&nbsp;
                   <u>doing good.</u>
                 </p>
-              </div><span class="foot">Interested In Playing</span>
+              </div><span class="foot">Wants To Play</span>
             </div>
-            <div class="games"><img src="img/game-1.jpg"><img src="img/game-2.jpg"><img src="img/game-3.jpg"></div>
+            <div class="games"><img src="./landing_files/img/game-1.jpg"><img src="./landing_files/img/game-2.jpg"><img src="./landing_files/img/game-3.jpg"></div>
           </div>
         </div>
       </div>
@@ -233,18 +246,18 @@
                         <input id="signup_bottom_lang" name="signup[lang]" type="hidden" value="en">
                       </div>
                       <div class="mimi_field required">I,
-                        <input id="signup_bottom_name" name="signup[name]" type="text" data-required-field="This field is required" placeholder="(your name)" class="name">, would like to journey
+                        <input id="signup_bottom_name" name="signup[name]" type="text" data-required-field="Empty field" placeholder="(your name)" class="name">, would like to journey
                         forth into this new world of games. Please send my
                         invite to @
                       </div>
                       <div class="mimi_field required">
-                        <input id="signup_bottom_email" name="signup[email]" type="text" data-required-field="This field is required" placeholder="(your email)" class="email">.
+                        <input id="signup_bottom_email" name="signup[email]" type="text" data-required-field="Empty field" placeholder="(your email)" class="email">.
                       </div>
                       <div class="mimi_field">
-                        <input id="webform_bottom_submit_button" type="submit" value="Journey With Us" data-default-text="Subscribe" data-submitting-text="Sending..." data-invalid-text="↑ You forgot some required fields" data-choose-list="↑ Choose a list" data-thanks="Thank you!" class="submit my-button-orbit">
+                        <input id="webform_bottom_submit_button" type="submit" value="Journey With Us" data-default-text="Subscribe" data-submitting-text="Sending..." data-invalid-text="↑ Please fill empty fields" data-choose-list="↑ Choose a list" data-thanks="Thank you!" class="submit my-button-orbit">
                       </div>
                     </form>
-                  </div><img src="img/Jesse-Schell-Casual-Headshot.jpg">
+                  </div><img src="./landing_files/img/Jesse-Schell-Casual-Headshot.jpg">
                   <p class="text-center"><i>
                       “GameTree has the potential to be a revolutionary social
                       network that is based both on the secrets of player psychology
@@ -334,12 +347,13 @@
       (function (d, w, c) {
           (w[c] = w[c] || []).push(function () {
               try {
-                  w.yaCounter40221379 = new Ya.Metrika({
-                      id: 40221379,
+                  w.yaCounter40349745 = new Ya.Metrika({
+                      id: 40349745,
                       clickmap: true,
                       trackLinks: true,
                       accurateTrackBounce: true,
-                      webvisor: true
+                      webvisor: true,
+                      trackHash: true
                   });
               } catch (e) {
               }
@@ -360,14 +374,40 @@
       })(document, window, "yandex_metrika_callbacks");
     </script>
     <noscript>
-      <div><img src="https://mc.yandex.ru/watch/40221379" style="position:absolute; left:-9999px;" alt=""></div>
+      <div><img src="https://mc.yandex.ru/watch/40349745" style="position:absolute; left:-9999px;" alt=""></div>
     </noscript>
     <!-- /Yandex.Metrika counter-->
+    <script>
+      (function (d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+          fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>
+      window.twttr = (function (d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0],
+                  t = window.twttr || {};
+          if (d.getElementById(id)) return t;
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "https://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js, fjs);
+          t._e = [];
+          t.ready = function (f) {
+              t._e.push(f);
+          };
+          return t;
+      }(document, "script", "twitter-wjs"));
+    </script>
+    <!-- VK-->
+    <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=BO7SH/zk8jGIXzJDi4VE8IkUHyxbUGFOkgHJxKNW1nuPJFsQwYgbtor7tx2B4PGTYagcUJXqXyrA/LvHMucPEPwYC2HaIFPDU1rJfRPlDDlNTO1IjddKLWNeeszYVDSBsVMBC8tbDg3pQxEqoaqExrbiD/GZpWSzxArPcnidO6c-&pixel_id=1000035823';</script>
+    <!-- /VK-->
   </body>
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/foundation.js"></script>
-  <script type="text/javascript" src="js/velocity.min.js"></script>
-  <script type="text/javascript" src="js/modernizr.custom.63321.js"></script>
-  <script type="text/javascript" src="js/jquery.dropdown.js"></script>
-  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="./landing_files/js/velocity.min.js"></script>
+  <script type="text/javascript" src="./landing_files/js/animated-headline.js"></script>
+  <script type="text/javascript" src="./landing_files/js/app.min.js"></script>
 </html>

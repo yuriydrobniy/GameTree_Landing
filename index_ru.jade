@@ -4,54 +4,56 @@ html(lang='ru')
         meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1")
         title
-            | GameTree
-        //- link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/foundation.min.css")
-        //link(href='https://fonts.googleapis.com/css?family=Lora|Open+Sans|Ubuntu', rel='stylesheet')
+            | GameTree – поиск друзей для геймеров!
+        meta(name='description', content="GameTree это рекомендательный сервис, который поможет вам выбрать игры под ваш личный вкус, а также найти новых друзей с такими же предпочтениями и адекватных союзников.")
+        meta(name='keywords', content="games, find friends, recommendations, app, ios, android")
+
         link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet')
-        link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/foundation.css")
-        link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/main.css")
-        //- link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/fonts.css")
-        link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/fontello.css")
-        link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/animate.css")
-        //- link(type="text/css", rel="stylesheet", rev="stylesheet", href="style/dropdown-lang.css")
-        link(rel='icon', type='image/x-icon', href='img/favicon.ico?v1')
+        link(type="text/css", rel="stylesheet", rev="stylesheet", href="./landing_files/style/foundation.min.css")
+        link(type="text/css", rel="stylesheet", rev="stylesheet", href="./landing_files/style/main.css")
+        link(type="text/css", rel="stylesheet", rev="stylesheet", href="./landing_files/style/fontello.css")
+        link(type="text/css", rel="stylesheet", rev="stylesheet", href="./landing_files/style/animate.css")
+        link(type="text/css", rel="stylesheet", rev="stylesheet", href="./landing_files/style/animated-headline.css")
+        link(rel='icon', type='image/x-icon', href='./landing_files/img/favicon.ico?v1')
 
-        //- script(type='text/javascript', src='https://vk.com/js/api/openapi.js?133')
+        script(type="text/javascript", src="./landing_files/js/jquery-2.1.1.js")
+        script(type="text/javascript", src="./landing_files/js/foundation.min.js")
+
         script(type='text/javascript', src='http://vk.com/js/api/share.js?94', charset='windows-1251')
-    body.ru-lang
-        script.
-            (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.6";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        script.
-            window.twttr = (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0],
-                        t = window.twttr || {};
-                if (d.getElementById(id)) return t;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "https://platform.twitter.com/widgets.js";
-                fjs.parentNode.insertBefore(js, fjs);
-                t._e = [];
-                t.ready = function (f) {
-                    t._e.push(f);
-                };
-                return t;
-            }(document, "script", "twitter-wjs"));
+        script(type='text/javascript').
+            (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=A142Rs6FIIQ89gUTPxUf14zrVpIEsASFrVC7*e2T6ZGByPyua7MQZwjLg2k4ntwXtVRnwITb6oRR2gDwpt71By456bwiFtX7lAnBbJxzL8JCjpVLiGCnSgGyU/aQsFKP0aQ9eENzaVxbaxq8RwMoYViI7fn7DI04ip*6jEjAXeM-&pixel_id=1000032363';
 
+        // Facebook Pixel Code
+        script.
+            !function (f, b, e, v, n, t, s) {
+                if (f.fbq)return;
+                n = f.fbq = function () {
+                    n.callMethod ?
+                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq)f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = '2.0';
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window,
+                    document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '113892682416006'); // Insert your pixel ID here.
+            fbq('track', 'PageView');
+        noscript
+            img(height='1', width='1', style='display:none', src='https://www.facebook.com/tr?id=113892682416006&ev=PageView&noscript=1')
+        // DO NOT MODIFY
+        // End Facebook Pixel Code
+
+    body.ru-lang
         <!-- HEADER -->
         header.header(data-magellan, data-bar-offset='-30')
             .language
-                //- Hide flag option that’s already selected and make others hidden until acted upon. Mouseover on web, click on mobile.
-                //- select#cd-dropdown.cd-select(name='cd-dropdown', onchange='window.location.href=this.value')
-                //-     option(value='-1', selected='')
-                //-     option.ru(value='http://ru.gametree.me/')
-                    //- option.en(value='2')
                 .language-wrapper
                     .ru.active
                     .en.not-active
@@ -59,18 +61,27 @@ html(lang='ru')
             .row
                 .card-container
                     .flipper-card-container
-                        .header-card.card-one
+                        .header-card.card-one.cd-intro
                             .logo.bounceInLeft.animated
-                                img(src='img/logo-header.png')
+                                img(src='./landing_files/img/logo-header.png')
                                 span Beta
-                            .card-main-text.bounceInRight.animated
-                                | Находи новые&nbsp;
-                                span игры
-                                | &nbsp;и
+                            .card-main-text.bounceInRight.animated.cd-headline.rotate-1
+                                | Этот мир&nbsp;
+                                span.t-brown ВЕЛИК.
                                 br
-                                | играй в них с&nbsp;
-                                span.special друзьями
-                                | !
+                                strong Gametree
+                                | &nbsp;подскажет какая&nbsp;
+                                span.cd-words-wrapper
+                                    b.t-brown.is-visible настольная
+                                    b.t-blue компьютерная
+                                    b.t-yellow мобильная
+                                    b.t-blue консольная
+                                br
+                                | игра тебе будет&nbsp;
+                                span.t-blue по нраву
+                                | &nbsp;и с кем будет лучше в нее&nbsp;
+                                span.t-yellow играть
+                                |.
                             #button-one.my-button.fadeIn.animated Регистрация
                             a.link.link-down.my-button(href="#nav")
                                 | Как это работает?
@@ -84,7 +95,6 @@ html(lang='ru')
                                         input#signup_lang(name='signup[lang]', type='hidden', value='ru')
                                     .mimi_field.required
                                         | Я,
-                                        //- input.name(type='text' placeholder='(your name)')
                                         input#signup_name.name(
                                             name='signup[name]',
                                             type='text',
@@ -95,7 +105,6 @@ html(lang='ru')
                                         | игр. Пожалуйста, пришлите моё приглашение
                                         | на адрес:
                                     .mimi_field.required
-                                        //- input.email(type='text' placeholder='(your email)')
                                         input#signup_email.email(
                                             name='signup[email]',
                                             type='text',
@@ -113,19 +122,15 @@ html(lang='ru')
                                             data-choose-list='↑ Choose a list',
                                             data-thanks='Спасибо, что вы с нами!'
                                             )
-                            //- #button-two.my-button.position Регистрация
                             a.link.link-down.my-button(href="#nav")
                                 | Как это работает?
                             a.link.arrow_box.show-for-large(href="#nav")
-                            //- .arrow_box.show-for-large
                     .header-card.card-three
                         .card-main-text.position
                             | Спасибо, что вы с нами!
                         a.link.link-down.my-button(href="#nav")
                             | Как это работает?
                         a.link.arrow_box.show-for-large(href="#nav")
-                        //- .arrow_box.show-for-large
-        //- Nav should stick after top touches top of screen, not bottom. Make everything about 5px shorter
         nav#nav.nav(data-sticky-container='', data-magellan, data-bar-offset='100', data-threshold='')
             div(data-sticky='',data-sticky-on='small', data-top-anchor="nav", data-options='marginTop:0;', style='width:100%')
                 .row
@@ -134,30 +139,32 @@ html(lang='ru')
                         .title-bar-title Меню
                     #my-menu.top-bar
                         ul.dropdown.menu(data-dropdown-menu='')
-                            li
+                            li.text-left
                                 a.link
-                                    img(src='img/logo-nav.png')
+                                    img(src='./landing_files/img/logo-nav.png')
                             li
                                 a.link.games(href='http://blog.gametree.me/mission/' target="_blank") Про нас
-                            li
                                 a.link.fiends(href='http://blog.gametree.me/' target="_blank") Блог
-                            li
                                 a.link.how-it-works(href='http://blog.gametree.me/contact-form/' target="_blank") Связаться с нами
-                            li
+                            li.text-right
                                 a.link.my-button.my-button-nav(href="#bottom-form")
                                     | Регистрация
         section#section-one(data-magellan-target="section-one")
             .row.section-one
                 .columns.description
-                    i
-                        | С помощью GameTree вы получите максимум удовольствия
-                        | от игр, благодаря уникальной технологии подбора игр под ваш вкус.
-                    //- span.signature John Uke, GameTree
+                    | Мир игр еще никогда не был настолько шумным и переполненным.
+                    | GameTree поможет вам найти лучших&nbsp;
+                    span союзников
+                    | &nbsp;и лучшие&nbsp;
+                    span игры
+                    |, чтобы
+                    | вы меньше тратили время на поиски и больше времени на то,
+                    | что мы все любим - веселиться.
             .row.section-two
                 .large-4.columns
                     .box.blue
                         .circle
-                            img(src='img/icons_advice.png')
+                            img(src='./landing_files/img/icons_advice.png')
                         h2 Личные рекомендации
                         p
                             | Читайте отзывы ваших друзей и таких же
@@ -165,7 +172,7 @@ html(lang='ru')
                 .large-4.columns
                     .box.brown
                         .circle
-                            img.jewel(src='img/icon_jewel.png')
+                            img.jewel(src='./landing_files/img/icon_jewel.png')
                         h2 Скрытые Сокровища
                         p
                             | Открывайте для себя новые игры и жанры,
@@ -173,7 +180,7 @@ html(lang='ru')
                 .large-4.columns
                     .box.yellow
                         .circle
-                            img.gamefriends(src='img/icon_gamefriends.png')
+                            img.gamefriends(src='./landing_files/img/icon_gamefriends.png')
                         h2 Играйте с друзьями
                         p
                             | Узнайте, кто из ваших друзей хотел бы играть
@@ -193,92 +200,97 @@ html(lang='ru')
                         strong &nbsp;65% более точные&nbsp;
                     | , чем статистика отзывов пользователей.
             .row.section-five
-                //- these will have new style with text filled boxes connected to image circles (check Skype)
                 .playing-cards-wrapper
                     .playing-cards
                         div.data
-                            img.avatar(src='img/jacklondon.png')
-                            span.name.text-left boblikesoup
+                            img.avatar(src='./landing_files/img/jacklondon.png')
+                            span.name.my-label.yellow.text-left boblikesoup
                             span.head.text-left Предприниматель
                             span.head.text-left Первооткрыватель
-                            span.small-ico.mouse
-                            span.small-ico.cube
+                            span.small-ico.mouse.my-label
+                            span.small-ico.cube.my-label
                         div
-                            div.head Любит:
+                            div.head
+                                span.my-label.blue Любит:
                                 p
                                     u Соперничество
                                     | ,&nbsp;
                                     u трудности
                                     | , и&nbsp;
                                     u товарищество.
-                            div.head Мотивации:
+                            div.head
+                                span.my-label.brown Мотивации:
                                 p
                                     u Достижения
                                     | ,&nbsp;
                                     u энтузиазм
                                     | , и&nbsp;
                                     u успешное выполнение задач.
-                            span.foot Предпочитает игры:
+                            span.foot Хочет играть в:
                         div.games
-                            img(src='img/game-1.jpg')
-                            img(src='img/game-2.jpg')
-                            img(src='img/game-3.jpg')
+                            img(src='./landing_files/img/game-1.jpg')
+                            img(src='./landing_files/img/game-2.jpg')
+                            img(src='./landing_files/img/game-3.jpg')
                     .playing-cards
                         div.data
-                            img.avatar(src='img/jacklondon.png')
-                            span.name.text-left boblikesoup
+                            img.avatar(src='./landing_files/img/jacklondon.png')
+                            span.name.my-label.yellow.text-left boblikesoup
                             span.head.text-left Предприниматель
                             span.head.text-left Первооткрыватель
-                            span.small-ico.mouse
-                            span.small-ico.cube
+                            span.small-ico.mouse.my-label
+                            span.small-ico.cube.my-label
                         div
-                            div.head Любит:
+                            div.head
+                                span.my-label.blue Любит:
                                 p
                                     u Соперничество
                                     | ,&nbsp;
                                     u трудности
                                     | , и&nbsp;
                                     u товарищество.
-                            div.head Мотивации:
+                            div.head
+                                span.my-label.brown Мотивации:
                                 p
                                     u Достижения
                                     | ,&nbsp;
                                     u энтузиазм
                                     | , и&nbsp;
                                     u успешное выполнение задач.
-                            span.foot Предпочитает игры:
+                            span.foot Хочет играть в:
                         div.games
-                            img(src='img/game-1.jpg')
-                            img(src='img/game-2.jpg')
-                            img(src='img/game-3.jpg')
+                            img(src='./landing_files/img/game-1.jpg')
+                            img(src='./landing_files/img/game-2.jpg')
+                            img(src='./landing_files/img/game-3.jpg')
                     .playing-cards
                         div.data
-                            img.avatar(src='img/jacklondon.png')
-                            span.name.text-left boblikesoup
+                            img.avatar(src='./landing_files/img/jacklondon.png')
+                            span.name.my-label.yellow.text-left boblikesoup
                             span.head.text-left Предприниматель
                             span.head.text-left Первооткрыватель
-                            span.small-ico.mouse
-                            span.small-ico.cube
+                            span.small-ico.mouse.my-label
+                            span.small-ico.cube.my-label
                         div
-                            div.head Любит:
+                            div.head
+                                span.my-label.blue Любит:
                                 p
                                     u Соперничество
                                     | ,&nbsp;
                                     u трудности
                                     | , и&nbsp;
                                     u товарищество.
-                            div.head Мотивации:
+                            div.head
+                                span.my-label.brown Мотивации:
                                 p
                                     u Достижения
                                     | ,&nbsp;
                                     u энтузиазм
                                     | , и&nbsp;
                                     u успешное выполнение задач.
-                            span.foot Предпочитает игры:
+                            span.foot Хочет играть в:
                         div.games
-                            img(src='img/game-1.jpg')
-                            img(src='img/game-2.jpg')
-                            img(src='img/game-3.jpg')
+                            img(src='./landing_files/img/game-1.jpg')
+                            img(src='./landing_files/img/game-2.jpg')
+                            img(src='./landing_files/img/game-3.jpg')
         section.section-slideshow
             .row
                 .wrapper
@@ -296,7 +308,6 @@ html(lang='ru')
                                                 input#signup_bottom_lang(name='signup[lang]', type='hidden', value='ru')
                                             .mimi_field.required
                                                 | Я,
-                                                //- input.name(type='text' placeholder='(your name)')
                                                 input#signup_bottom_name.name(
                                                 name='signup[name]',
                                                 type='text',
@@ -307,7 +318,6 @@ html(lang='ru')
                                                 | игр. Пожалуйста, пришлите моё приглашение
                                                 | на адрес:
                                             .mimi_field.required
-                                                //- input.email(type='text' placeholder='(your email)')
                                                 input#signup_bottom_email.email(
                                                 name='signup[email]',
                                                 type='text',
@@ -325,33 +335,20 @@ html(lang='ru')
                                                 data-choose-list='↑ Choose a list',
                                                 data-thanks='Thank you!'
                                                 )
-                                        //- form.card-form
-                                        //-    | I,
-                                        //-    input.name(type='text' placeholder='(your name)')
-                                        //-    | , would like to journey forth
-                                        //-    | forth into this new world of games. Please send my
-                                        //-    | invite to @
-                                        //-    input.email(type='text' placeholder='(your email)')
-                                        //-    | .
-                                            //-input(type='submit' value="Journey With Us")
-                                    //- #button-three.my-button.my-button-orbit Journey With Us
-                                    img(src='img/Jesse-Schell-Casual-Headshot.jpg')
+                                    img(src='./landing_files/img/Jesse-Schell-Casual-Headshot.jpg')
                                     p.text-center
                                         i
                                             | “GameTree может стать революционной социальной сетью, основанной на
                                             | секретах психологии игроков и нашей огромной любви к играм”
-                                    //- h3.text-center Jesse Schell
                                     div.bottom
                                         i
                                             strong Джесси Шелль&nbsp;
                                             | Исполнительный директор&nbsp;
                                             a.link.link-underline(href="https://www.schellgames.com/about" target="_blank")
                                                 | Schell Games
-                                            //- Link to https://www.schellgames.com/about + green styling on all body links
                                             | , автор книги&nbsp;
                                             a.link.link-underline(href="https://www.amazon.com/Art-Game-Design-Lenses-Second/dp/1466598646/ref=sr_1_1?ie=UTF8&qid=1476383649&sr=8-1" target="_blank")
                                                 | The Art of Game Design&nbsp;
-                                            //- Link to https://www.amazon.com/Art-Game-Design-Lenses-Second/dp/1466598646/ref=sr_1_1?ie=UTF8&qid=1476383649&sr=8-1
                         //- Will be an automatic slideshow and only to the testimonials so don't need buttons
                         //- button.orbit-previous
                         //-     span.show-for-sr Previous Slide
@@ -452,12 +449,13 @@ html(lang='ru')
             (function (d, w, c) {
                 (w[c] = w[c] || []).push(function () {
                     try {
-                        w.yaCounter40221379 = new Ya.Metrika({
-                            id: 40221379,
+                        w.yaCounter40349745 = new Ya.Metrika({
+                            id: 40349745,
                             clickmap: true,
                             trackLinks: true,
                             accurateTrackBounce: true,
-                            webvisor: true
+                            webvisor: true,
+                            trackHash: true
                         });
                     } catch (e) {
                     }
@@ -478,11 +476,36 @@ html(lang='ru')
             })(document, window, "yandex_metrika_callbacks");
         noscript
             div
-                img(src='https://mc.yandex.ru/watch/40221379', style='position:absolute; left:-9999px;', alt='')
+                img(src='https://mc.yandex.ru/watch/40349745', style='position:absolute; left:-9999px;', alt='')
         // /Yandex.Metrika counter
-    script(type="text/javascript", src="js/jquery.min.js")
-    script(type="text/javascript", src="js/foundation.js")
-    script(type="text/javascript", src="js/velocity.min.js")
-    script(type="text/javascript", src="js/modernizr.custom.63321.js")
-    script(type="text/javascript", src="js/jquery.dropdown.js")
-    script(type="text/javascript", src="js/app.js")
+        script.
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        script.
+            window.twttr = (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                        t = window.twttr || {};
+                if (d.getElementById(id)) return t;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+                t._e = [];
+                t.ready = function (f) {
+                    t._e.push(f);
+                };
+                return t;
+            }(document, "script", "twitter-wjs"));
+        // VK
+        script(type='text/javascript').
+            (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=BO7SH/zk8jGIXzJDi4VE8IkUHyxbUGFOkgHJxKNW1nuPJFsQwYgbtor7tx2B4PGTYagcUJXqXyrA/LvHMucPEPwYC2HaIFPDU1rJfRPlDDlNTO1IjddKLWNeeszYVDSBsVMBC8tbDg3pQxEqoaqExrbiD/GZpWSzxArPcnidO6c-&pixel_id=1000035823';
+        // /VK
+    script(type="text/javascript", src="./landing_files/js/velocity.min.js")
+    script(type="text/javascript", src="./landing_files/js/animated-headline.js")
+    script(type="text/javascript", src="./landing_files/js/app.min.js")
